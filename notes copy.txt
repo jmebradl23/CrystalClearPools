@@ -1,0 +1,223 @@
+**************    
+*** SET UP ***
+**************
+
+Step 1: Create a React app
+    $ npx create-react-app <name>
+Step 2: Delete everything in src directory
+Step 3: Create an index.js file in the src directory
+Step 4: In the index.js file, import the React library in order to translate your JSX into HTML in the browser.
+    import React from 'react';
+Step 5: In the index.js file, import the React DOM library in order to access and modify the DOM.
+    import ReactDOM from 'react-dom';
+Step 6: In the index.js file, add the following code so React can manipulate the DOM and add your JSX after it has been translated to HTML:
+    ...
+    ReactDOM.render(<App />, document.getElementById('root'));
+    ...
+Step 6: Run the development server
+    $ npm start
+
+***************************    
+*** CREATING COMPONENTS ***
+*************************** 
+
+Step 1: Createa a new component file in the src folder. (For this example we'll use the Basic.js file.)
+    <ComponentName>.js 
+Step 2: In the component file, import the React library in order to translate your JSX into HTML in the browser.
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+Step 3: Create a JSX function to return some html.
+    const Basics = function() {
+        return (
+            <section>
+                <h3>What is a component?</h3>
+            </section>
+        )
+    }
+Step 4: Export the component.
+    ...
+    export default Basic;
+Step 5: Import the new component in the index.js (or App.js) file so it can be rendered in the DOM.
+    ...
+    import Basics from './Components/Basics';
+    ...
+
+************************************
+*** CREATING REUSABLE COMPONENTS ***
+************************************
+Step 1: Create a new component (see CREATING COMPONENTS)
+    Example: Comment.js: 
+    import React from 'react';
+    import styling from '../main.css';
+    import faker from 'faker';
+
+    const Comments = function() {
+        return (
+            <div className="ui container comments">
+                <div className="comment">
+                    <a href="/" className="avatar">
+                        <img src={faker.image.avatar()} alt="avatar" />
+                    </a>
+                    <div className="content">
+                        <a href="/" className="author">
+                            Sam
+                        </a>
+                        <div className="metadata">
+                            <span className="date">Today at 6pm</span>
+                        </div>
+                        <div className="text">Nice comment.</div>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
+    export default Comments;
+Step 2: Create a second component that will be used to hold the details and specific configuration for each instance of the component. (see CREATING COMPONENTS but do not add to the App.js file. It will instead be nested inside it's parent component.)
+Step 3: Copy the inner code you need to use that will require specific configuration (from data) into the second component. 
+    Example: CommentDetails.js
+    import React from 'react';
+    import styling from '../main.css';
+    import faker from 'faker';
+
+    const CommentDetails = function() {
+        return (
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img src={faker.image.avatar()} alt="avatar" />
+                </a>
+                <div className="content">
+                    <a href="/" className="author">
+                        Sam
+                    </a>
+                    <div className="metadata">
+                        <span className="date">Today at 6pm</span>
+                    </div>
+                    <div className="text">Nice comment.</div>
+                </div>
+            </div>
+        )
+    }
+
+    export default CommentDetails;
+Step 4: In order to nest the details of you component inside it's parent, import the details component (CommentDetails) into it's parent component (Comments).
+    import CommentDetails from './CommentDetails';
+Step 5: After it's imported, add the component to your JSX.
+    ...
+    return (
+        <div className="ui container comments">
+            < CommentDetails />
+        </div>
+    )
+    ...
+Step 6: In the ComponentDetails file, add an array to loop through so each component created will have different data. 
+    let names = [
+        {name:'James',comment:'Cool!',date:'May 15, 2019 at 2:30pm'},
+        {name:'John',comment:'Awesome!',date:'April 19, 2018 at 4:55pm'},
+        {name:'Sue',comment:'Sweet!',date:'Oct 31, 2017 at 12:01am'}
+    ];
+Step 7: In the ComponentDetails JSX, include a loop to loop through each array so that a component will be made for each element in the array. (Be sure to wrap it in a div after the return statement otherwise you will experience an error.)
+    <div>
+        {names.map((val, index) => {
+            return (
+                <div className="comment">
+                    <a href="/" className="avatar">
+                        <img src={faker.image.avatar()} alt="avatar" />
+                    </a>
+                    <div className="content">
+                        <a href="/" className="author">
+                            {val.name}
+                        </a>
+                        <div className="metadata">
+                            <span className="date">{val.date}</span>
+                        </div>
+                        <div className="text">{val.comment}</div>
+                    </div>
+                </div>
+            )
+        })}
+    </div>
+
+***********************
+*** PROPS USABILITY ***
+***********************
+Step 1: Create a component that will house the child component.
+    import React from 'react';
+    import styling from '../main.css';
+
+    const Properties = function() {
+        return (
+            <div className="ui container ">
+                <div className="name">My name is:</div>
+                *Child will go here*
+            </div>
+        )
+    }
+
+    export default Properties;
+
+Step 2: Create a child component that will be nested inside the parent component.
+    import React from 'react';
+    import styling from '../main.css';
+
+    const PropsDetails = function() {
+        return (
+            <div>
+                <p> *name will go here* </p>
+            </div>
+        )
+    }
+
+    export default ProperDetails;
+
+Step 3: In the parent component, import the child component and add it to your html.
+    ...
+    import PropertyDetails from './PropertyDetails';
+    ...
+     <div className="ui container ">
+        <div className="name">My name is:</div>
+        < PropertyDetails />
+    </div>
+    ...
+Step 4: Add the parent component to your App.js file.
+    ...
+    import Properties from './Properties';
+    ...
+    <Route path="/properties" component={Properties} />
+    ...
+
+Step 5: In the parent component, pass down the data you want to use in the child by creating a prop inside the child tag in your JSX.
+    < PropertyDetails data='James' />
+
+Step 6: In your child component, in order to use the properties passed down from the parent, we need to add an argument we can access in the constructor (the first argument, referred to as 'props').
+    const PropsDetails = function(props) {
+        return (
+            <div>
+                <p>{props.data}</p>
+    ...
+
+*************
+** NESTING **
+*************
+
+Step 1: In order to nest componenets we need to make use of the props system. Create your components you want to use. (Example: ApprovalCard and BasicComment components)
+Step 2: Wrap your child component inside the parent component
+    const Nesting = function() {
+        return (
+            <div>
+                < ApprovalCard >
+                    < BasicComment/>
+                </ ApprovalCard >
+            </div>
+        )
+    }
+
+    export default Nesting;
+Step 3: The child component is now considered a prop of the parent componenet. Therefore we now need to access the props on the parent (ApprovalCard) component. We do this by adding a props argument to the constructor and then using the props.children in our JSX to display the child component.
+    ...
+    const ApprovalCard = function(props) {
+        return (
+            <div className="ui card">
+                <div className="content">{props.children}</div>
+    ...
+

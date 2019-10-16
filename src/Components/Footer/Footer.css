@@ -1,0 +1,63 @@
+.Footer {
+    background-color: black;
+    color: lightgray;
+}
+
+.Footer .map {
+    margin: 3vw auto;
+}
+
+.Footer .half-cont {
+    flex: 0 1 65%;
+  }
+
+.Footer .half-img {
+      flex: 0 1 25%;
+  }
+
+.Footer .footer-container {
+    width: 90%;
+    margin: 3vw auto 0;
+    padding-bottom: 30px;
+  }
+
+.Footer .map img {
+      border-radius: 50%;
+  }
+
+.Footer a {
+      text-decoration: none;
+      color: lightgray;
+  }
+
+  .Footer a:hover {
+      color: white;
+      text-decoration: underline;
+  }
+
+  .Footer p {
+      font-size: 20px;
+  }
+
+  .Footer .quad-flex {
+      display: flex;
+      justify-content: center;
+  }
+
+  .credit-cards img {
+    margin: 10px;
+  }
+
+  .txt-sm {
+      padding: 5px 10px;
+  }
+
+  @media only screen and (max-width: 776px) {
+      .Footer p {
+          text-align: center;
+      }
+
+      .Footer .half {
+          padding: 10px 0 0;
+      }
+  }

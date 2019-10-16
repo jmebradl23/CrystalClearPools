@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Proza Libre', sans-serif;
+  min-width: 350px;
+}
+
+.txt-ctr {
+  text-align: center;
+}
+
+h1 {
+  /* font-size: 4vw; */
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 3.5vw;
+}
+
+h3 {
+  /* font-size: 2.6vw; */
+  font-size: 28px;
+}
+
+h4 {
+  /* font-size: 2.4vw; */
+  font-size: 18px;
+}
+
+h5 {
+  /* font-size: 2.2vw; */
+  font-size: 20px;
+}
+
+p, li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.txt-sm {
+  font-size: 12px;
+}
+
+section.padding-container {
+  width: 90%;
+  margin: 3vw auto;
+}
+
+.triplet-flex, .duet-flex, .quad-flex {
+  display: flex;
+  margin: 30px auto;
+}
+
+.dark {
+  background: #282828;
+  color: #fff;
+}
+
+.light {
+    background: lightgray;
+    color: #000;
+}
+
+.left {
+  order: 1
+}
+
+.right {
+  order: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+button.contact {
+  color: white;
+  background: #3651a4;
+  transition: .5s;
+  width: 200px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid black;
+}
+
+button.contact:hover {
+  color: black;
+  background: #A8DCF2;
+}
+
+/* section.padding-container.mt-100 {
+  margin-top: 120px;
+} */
+
+@media only screen and (min-width: 1220px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 776px) {
+  h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    border-top: 1px solid;
+    padding-top: 1.67em;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  .triplet-flex, .duet-flex, .quad-flex {
+    display: block;
+  }
+
+}

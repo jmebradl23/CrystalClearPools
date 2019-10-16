@@ -1,0 +1,202 @@
+
+/* text */
+/* section .sec-title {
+    font-size: 28px;
+} */
+
+.descript-title {
+    font-size: 24px;
+}
+
+.txt-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;                      
+    transform: translate(-50%, -50%);
+    min-width: 85%;
+}
+
+section {
+    width: 100%;
+    /* height: 100vh; */
+    /* background-size: cover; */
+}
+
+.sec-img {
+    height: 100vh;
+    background-size: cover;
+}
+
+.content {
+    height: auto;
+}
+
+.Home .sec1 {
+    background-image: url('/homeImg1.jpg');
+}
+
+.Home .sec2 {
+    background-image: url('/cleaning.jpg');
+    background-position: top center;
+}
+
+.Home .longpool img {
+    max-height: 400px;
+}
+
+.Home .longpool h3 {
+    margin: 0 0 10px;
+}
+
+.Home .longpool h5 {
+    margin: 10px 0 0;
+}
+
+/* section.sec4 {
+    background-image: url('../../img/background.jpg');
+}
+
+
+section.sec3 {
+    background-image: url('background3.jpg')
+} */
+
+hr {
+    width: 75%;
+}
+
+/* .content h1 {
+    padding: 0 40px;
+} */
+
+/* .content p {
+    padding: 10px 80px;
+} */
+
+
+
+
+
+
+/* ADded css from img-text component */
+
+  
+/* body {
+    margin: 0;
+    padding: 0;
+  } */
+
+/* .main-container h2 {
+    font-size: 3vw;
+    padding-bottom: 3px;
+} */
+
+/* .main-container p {
+    font-size: 1.6vw;
+    line-height: 1.3
+} */
+  
+  /* .img_holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  } */
+  
+  /* .img_holder img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+  } */
+  
+  /* For images that are taller than they are wide. */
+  /* .tall img {
+    max-height: 80vh;
+} */
+  
+  /* .dark {
+    background: #282828;
+    color: #fff;
+  } */
+  
+  /*  */
+  .triplet-flex {
+    /* display: flex; */
+    align-content: center;
+    justify-content: space-between;
+  }
+  
+  /* .left {
+    order: 1;
+  }
+  
+  .right {
+    order: 2;
+  } */
+  
+  .third {
+    flex: 0 1 30%;
+    /* margin: 4vh 5vw; */
+    /* Determining width of each child of flex parent. */
+    /* flex-basis: 30%; */
+  }
+  
+/* @media only screen and (min-width: 1500px) {
+    .img-container, .img-container.tall {
+        height: 30vh;
+    }
+} */
+  
+/* @media only screen and (min-width: 1200px) {
+    .main-container h2 {
+        font-size: 30px;
+    }
+
+    .main-container p {
+        font-size: 18px;
+    }
+} */
+
+/* @media only screen and (max-width: 776px) {
+    .main-container h2 {
+        font-size: 20px;
+    }
+    
+    .main-container p {
+        font-size: 14px;
+    }
+} */
+
+/* @media only screen and (max-width: 600px) {
+    .main-container {
+        display: block;
+    }
+
+    .main-container > div {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .half {
+        padding: 3vw 5vw;
+        box-sizing: border-box;
+    }
+} */
+
+
+
+.Home .longpool img {
+    max-height: 600px;
+}
+
+.Home .longpool h5 {
+    margin: 10px 0;
+}
+
+
+@media only screen and (max-width: 776px) {
+    .descript-title {
+        font-size: 20px;
+    }
+}

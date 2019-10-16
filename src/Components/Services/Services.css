@@ -1,0 +1,21 @@
+.Services .sec1 {
+    background-image: url('/background7.jpg');
+}
+
+.Services .duet-flex {
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Services .longpool img {
+    max-height: 650px;
+}
+
+.Services h5 {
+    margin-bottom: 0;
+}
+
+.Services p {
+    margin-top: 5px;
+}
