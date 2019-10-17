@@ -4,31 +4,48 @@
 
 .Gallery .full-container {
     width: 80vw;
-    height: 100vh;
+    height: auto;
     position: relative;
     margin: 0 auto;
     text-align: center;
 }
 
+.Gallery .grow.full-container {
+    height: auto;
+}
+
 .Gallery .img-container {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     overflow: hidden;
     display: inline-block;
     transition: 0s;
+    margin: 10px;
+}
+
+.Gallery .img-container:hover {
+    cursor: pointer;
 }
 
 .Gallery .img-container.expand {
-    width: 100%;
-    height: auto;
     position: absolute;
     display: block;
     top: 0;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    /* top: 50%; */
+    transform: translateX(-50%);
     transition: 1s;
     z-index: 900;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+/* 
+
+    width: auto;
+    height: auto;
+    max-width: 100vw;
+    max-height: 100vh; */
 }
 
 .Gallery .img-container.expand.tall {
@@ -57,7 +74,7 @@
     background: white;
     color: black;
     border-radius: 50%;
-    padding: 0px 7px 3px 7px;
+    padding: 0px 9px 0px 9px;
     font-size: 20px;
     cursor: pointer;
 }
@@ -67,24 +84,29 @@
     height: 100%;
 }
 
-.Gallery .expand img {
-    max-height: 100vh;
-    max-width: 100vw;
-    width: 100%;
-    height: auto;
-}
-
 .Gallery .img-container.fade {
     opacity: .3;
     z-index: 100;
 }
 
 .Gallery .img-container.expand {
-    z-index: 900;
+    z-index: 200;
 }
 
 @media only screen and (max-width: 776px) {
     .Gallery .img-container.expand.tall {
         width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .Gallery .img-container {
+        height: 75px;
+        width: 75px;
+    }
+
+    .Gallery .img-container.expand {
+        height: auto;
     }
 }
