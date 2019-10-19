@@ -1,6 +1,6 @@
 import React from 'react';
 import './Services.css';
-import Longpool from '../../img/longpool.jpg';
+// import Longpool from '../../img/longpool.jpg';
 import '../../main.css';
 import InlineImg from '../InlineImg/InlineImg';
 import Img1 from '../../img/img1.jpg'

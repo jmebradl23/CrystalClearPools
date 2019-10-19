@@ -7,7 +7,7 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import {InlineImg} from "../InlineImg/InlineImg";
 import InlineImg from '../InlineImg/InlineImg';
-import Footer from '../Footer/Footer';
+// import Footer from '../Footer/Footer';
 // import Nav from '../Nav/Nav';
 // import Faq from '../FAQ/Faq';
 // import HomeImg1 from '../../img/homeImg1.jpg';
@@ -23,6 +23,10 @@ class Home extends React.Component {
         iiDescription: "Crystal Clear Pool & Spa Service is one of the few Napa pool maintenance and repair companies to offer complete swimming pool maintenance and repair services for extremely affordable prices. This means that no matter the size of your project or number of Napa pool maintenance or repair services you require, you can trust that every step of the process will be expertly handled by the same company. Our work is always guaranteed, and we make sure that you are kept up-to-date on our progress and on any and all aspect of the work that may bring changes to the schedule or work order. If you are a Napa pool owner and would like more information on the pool maintenance and repair services we offer, do not hesitate to call us today. We will be happy to schedule a free estimate at your earliest convenience.",
         iiTag: "Call us now! (707) 252-8255"
 
+    }
+
+    componentDidMount () {
+        window.scrollTo(0, 0);
     }
 
     render () {

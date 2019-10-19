@@ -11,24 +11,30 @@ class Nav extends React.Component {
     constructor(props) {
         super(props);
         this.toggleDropdown = this.toggleDropdown.bind(this);
-        this.test = this.test.bind(this);
+        this.closeDropdown = this.closeDropdown.bind(this);
       }
 
     state = {
         smallNav: false,
         dropdown: false,
-        path: null
+        path:  null
     }
 
     componentDidMount () {
         window.addEventListener('scroll', this.updateNavbar.bind(this), true);
         window.addEventListener("resize", this.updateNavbar.bind(this), true);
-        this.setState({path: window.location.href.split('/')[window.location.href.split('/').length-1] });
+        this.setState({path: this.props.path});
     }
 
     componentWillUnmount () {
         window.removeEventListener('scroll', this.updateNavbar);
         window.removeEventListener('resize', this.updateNavbar);
+    }
+
+    componentDidUpdate() {
+        if(window.location.pathname !== this.state.path) {
+            this.setState({path: window.location.pathname})
+        }
     }
     
     toggleDropdown () {
@@ -39,26 +45,25 @@ class Nav extends React.Component {
     }
 
     updateNavbar() {
-        if ((window.scrollY) && (window.innerWidth>600)) {
+        if ((window.scrollY) && (window.innerWidth>776)) {
             this.setState({smallNav: true})
-        } else if ( window.innerWidth<600 ) {
+        } else if ( window.innerWidth<776 ) {
             this.setState({smallNav: true})
         } else {
             this.setState({smallNav: false})
         }
     }
 
-    test (ev) {
-        this.setState({
-            // Retrieve the passed parameters from 'div_id'
-            // and 'div_name' datasets
-            path: ev.currentTarget.dataset.div_id
-        });
+    closeDropdown (ev) {
+        if ( this.state.dropdown ) {
+            this.setState({dropdown: false})
+        }
     }
 
     render () {
         return (
             <nav id="topNav" className={ this.state.smallNav ? "black" : "" }>
+                <ul className="nav-links"></ul>
                 <Link to='/' onClick={this.test} data-div_id={null}>
                     <div className="logo">
                         <img src={logo} alt="Company logo"/>
@@ -75,19 +80,19 @@ class Nav extends React.Component {
                 <div className="container">
                     <div className={ this.state.dropdown ? "slider opened" : "slider closed" }>
                         <ul className="nav-links">
-                            <Link to='/about' className={this.state.path=='about'? 'active about': 'about'} onClick={this.test} data-div_id={'about'}> 
+                            <Link to='/about' className={this.state.path==='/about'? 'active about': 'about'} onClick={this.closeDropdown} data-div_id={'about'}> 
                                 <li>About</li>
                             </Link>
-                            <Link to='/services' className={this.state.path=='services'? 'active services': 'services'} onClick={this.test} data-div_id={'services'}> 
+                            <Link to='/services' className={this.state.path==='/services'? 'active services': 'services'} onClick={this.closeDropdown} data-div_id={'services'}> 
                                 <li>Services</li>
                             </Link>
-                            <Link to='/faq' className={this.state.path=='faq'? 'active faq': 'faq'} onClick={this.test} data-div_id={'faq'}>
+                            <Link to='/faq' className={this.state.path==='/faq'? 'active faq': 'faq'} onClick={this.closeDropdown} data-div_id={'faq'}>
                                 <li>FAQ</li>
                             </Link>
-                            <Link to='/gallery' className={this.state.path=='gallery'? 'active gallery': 'gallery'} onClick={this.test} data-div_id={'gallery'}>
+                            <Link to='/gallery' className={this.state.path==='/gallery'? 'active gallery': 'gallery'} onClick={this.closeDropdown} data-div_id={'gallery'}>
                                 <li>Gallery</li>
                             </Link>
-                            <Link to='/contact' className={this.state.path=='contact'? 'active contact': 'contact'} onClick={this.test} data-div_id={'contact'}>
+                            <Link to='/contact' className={this.state.path==='/contact'? 'active contact': 'contact'} onClick={this.closeDropdown} data-div_id={'contact'}>
                                 <li>Contact</li>
                             </Link>
                         </ul>

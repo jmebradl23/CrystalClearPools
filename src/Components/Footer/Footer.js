@@ -5,7 +5,7 @@ import Visa from '../../img/Visa.png';
 import Mastercard from '../../img/Mastercard.png';
 import AmEx from '../../img/American-Express.png';
 import Discover from '../../img/Discover.png';
-import InlineImg from '../InlineImg/InlineImg';
+// import InlineImg from '../InlineImg/InlineImg';
 // import longpool from '../../img/longpool.jpg';
 
 function Footer () {
@@ -22,7 +22,7 @@ function Footer () {
                         <div className="img-container">
                             <div className="img_holder map">
                                 <a href="https://www.google.com/maps/place/Crystal+Clear+Pool+%26+Spa/@38.3226835,-122.8657747,9z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd98c151d45dbda8e!8m2!3d38.324017!4d-122.3053349?hl=en" >
-                                    <img src={Map}/> 
+                                    <img src={Map} alt='Area map'/> 
                                 </a>   
                             </div>
                         </div>
@@ -30,10 +30,10 @@ function Footer () {
                 </div>
                 <div className="credit-cards txt-ctr">
                     <div className="quad-flex">
-                        <img src={Visa} />
-                        <img src={Mastercard} />
-                        <img src={AmEx} />
-                        <img src={Discover} />
+                        <img src={Visa} alt="visa"/>
+                        <img src={Mastercard} alt="mastercard"/>
+                        <img src={AmEx} alt="American Express"/>
+                        <img src={Discover} alt="Discover"/>
                     </div>
                 </div>
             </div>

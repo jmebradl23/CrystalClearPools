@@ -74,7 +74,7 @@ section.padding-container {
   display: none;
 }
 
-button.contact {
+.default-btn {
   color: white;
   background: #3651a4;
   transition: .5s;
@@ -87,9 +87,13 @@ button.contact {
   border: 1px solid black;
 }
 
-button.contact:hover {
+.default-btn:hover {
   color: black;
   background: #A8DCF2;
+}
+
+.lg-hidden {
+  display: none;
 }
 
 /* section.padding-container.mt-100 {
@@ -145,6 +149,10 @@ button.contact:hover {
   }
 
   .triplet-flex, .duet-flex, .quad-flex {
+    display: block;
+  }
+
+  .lg-hidden {
     display: block;
   }
 

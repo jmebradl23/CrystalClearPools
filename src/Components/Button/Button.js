@@ -4,7 +4,7 @@ import { tsPropertySignature } from '@babel/types';
 function Button (props) {
   return (
     <div>
-        <button className="contact">{props.text}</button>
+        <button className="default-btn">{props.text}</button>
     </div>
   );
 }

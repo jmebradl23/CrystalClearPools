@@ -1,0 +1,16 @@
+input {
+    display: block;
+}
+
+.error-msgs p {
+    color: red;
+    text-align: center;
+}
+
+.error-msgs {
+    background: pink;
+    border-radius: 5px;
+    border: 1px solid darkgray;
+    margin: 0 auto;
+    max-width: 300px;
+}

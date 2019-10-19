@@ -1,63 +1,25 @@
 import React from 'react';
 import './Faq.css';
-import Footer from '../../Footer/Footer';
+// import Footer from '../../Footer/Footer';
 import QaDetails from '../QaDetails/QaDetails';
 import {Link} from 'react-router-dom';
+// import { Redirect } from 'react-router';
 
 class Faq extends React.Component {
 
-    // state = {
-        
-    // }
-
-    // componentDidMount () {
-    //     window.addEventListener('scroll', this.updateNavbar.bind(this), true);
-    //     window.addEventListener("resize", this.updateNavbar.bind(this), true);
-    // }
-
-    // componentWillUnmount () {
-    //     window.removeEventListener('scroll', this.updateNavbar);
-    //     window.removeEventListener('resize', this.updateNavbar);
-    // }
-
-    // accordionHandler (event) {
-    //     this.setState(prevState => ({
-    //         expanded: !prevState.expanded
-    //         })
-    //     )
-    // }
-
-
-
-        // let target = event.currentTarget;
-        // let target = $(e.currentTarget);
-        // if ($(e.target.parentNode).hasClass('question-container')) {
-        //     // let target = $(e.currentTarget);
-        //     console.log('clicked question', e.currentTarget);
-        //     if (target.hasClass('expanded')) {
-        //         target.removeClass('expanded');
-        //     } else {
-        //         target.addClass('expanded');
-        //     }
-        // } else {
-        //     console.log(e.target)
-        // }
-    // }
-
-// function Faq() {
     render () {
         return (
             <div className="faq">
-                <section className='sec1 sec-img'>
-                    {/* <h1 className="txt-ctr txt-overlay">Pool Service, Spa Repairs and Pool Maintenance in Napa and surrounding areas</h1> */}
-                </section>
+                <section className='sec1 sec-img'></section>
                 <section id="question-list faq" className="mt-100 padding-container">
                     <h1 className="txt-ctr sec-title">Frequently Asked Questions</h1>
                     < QaDetails question={'Do I really need weekly maintenance services for my swimming pool?'} answer={'Weekly maintenance and cleaning is required to keep your pool safe and clean. Whether or not you need the full range of services Crystal Clear Pool & Spa Service provides really depends on how much time and effort you are willing to spend on your swimming pool yourself. If your only interest is to be able to jump in at any given time, then you probably want to consider getting the full service package.'} />
                     < QaDetails question={'Is there any way to prevent stains in my pool?'} answer={'Absolutely! Stains in your pool are caused by metals and minerals that come in contact with the water. Crystal Clear Pool & Spa Service can help reduce the appearance of stains in your pool by introducing sequestering agents in your swimming pool, which serve to pull these metals and minerals out of the water.'} />
                     < QaDetails question={'Why do I need a pool heater?'} answer={"You don't. Heaters are not necessary for you to fully enjoy your swimming pool. They do, however, extend your pool-using days considerably, warming up your swimming pool a lot faster (and sooner) than heat covers. They also allow you to continue using your swimming pool later in the season, when the sun isn't always warm enough to do the job."} />
                     <p>Above are the answers to a few of the most common questions we've come across, as well as a few swimming pool related tips below. If your question is not covered here, or if you would like more information, please do not hesitate to contact Crystal Clear Pool & Spa Service.</p>
-                    <button className="contact">Contact Us</button>
+                    <Link to='/contact' path='/contact' > 
+                        <button className="default-btn">Contact Us</button>
+                    </Link>
                 </section>
 
                 <section className='sec2 sec-img'></section>
@@ -72,33 +34,6 @@ class Faq extends React.Component {
                         <li>Consider enrolling in a CPR course. No one wants to think of the worst, but being prepared for it doesn't hurt and may mean life instead of death.</li>
                         <li>Fun in the sun around the swimming pool is a great way to spend a Saturday afternoon, but too much fun may amount to sunburns, especially in younger children. Make sure everyone is wearing waterproof sunscreen, and keep babies and infants in the shade when they are not in the water.</li>
                     </ul>
-                    
-                    {/* <div className="qa-container" onClick={this.accordionHandler}>
-                        <div className="question">
-                            <div className="question-container">
-                                <div className="arrow fa fa-angle-down fa-2x"></div>
-                                <div className="arrow fa fa-angle-up fa-2x"></div>
-                                <h2>{this.props.question}</h2>
-                                <h2>How much wood could a woodchuck chuck if a woodchuck could chuck wood?</h2>
-                            </div>
-                        </div>
-                        <div className="answer">
-                            <p>{this.props.answer}</p>
-                            <p>New York state wildlife expert Richard Thomas found that a woodchuck could (and does) chuck around 35 cubic feet of dirt in the course of digging a burrow. Thomas reasoned that if a woodchuck could chuck wood, he would chuck an amount equivalent to the weight of the dirt, or 700 pounds.</p>
-                        </div>
-                    </div>
-                    <div className="qa-container" onClick={this.accordionHandler}>
-                        <div className="question">
-                            <div className="question-container">
-                                <div className="arrow fa fa-angle-down fa-2x"></div>
-                                <div className="arrow fa fa-angle-up fa-2x"></div>
-                                <h2>Does this work?</h2>
-                            </div>
-                        </div>
-                        <div className="answer">
-                            <p>Yes.</p>
-                        </div>
-                    </div> */}
                 </section>
             </div>
         )

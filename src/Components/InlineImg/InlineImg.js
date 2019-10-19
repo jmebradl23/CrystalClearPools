@@ -3,9 +3,6 @@ import './InlineImg.css';
 // import longpool from '../../img/longpool.jpg';
 
 class InlineImg extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     state = {
        reverse: false 
@@ -39,7 +36,7 @@ class InlineImg extends React.Component {
                     <div className={ this.state.reverse ? `half half-cont left inline-${this.props.imgWidth}` : `half half-cont right inline-${this.props.imgWidth}` }>
                         <div className="img-container">
                             <div className="img_holder">
-                                <img src={this.props.img}/> 
+                                <img src={this.props.img} alt="beautiful"/> 
                                 {/* <div className={`inling-${this.props.imgWidth}`}>hello</div>    */}
                             </div>
                         </div>

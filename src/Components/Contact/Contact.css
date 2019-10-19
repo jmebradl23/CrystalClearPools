@@ -1,0 +1,58 @@
+.Contact .sec1 {
+    background-image: url('/background10.jpg');
+}
+
+.Contact .half {
+    flex: 0 1 50%;
+}
+
+.Contact label {
+    display: block;
+}
+
+.Contact .input-box {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.Contact input {
+    width: 90%;
+    height: 25px;
+    border-radius: 10px;
+    border:1px solid #000
+}
+
+.Contact .right {
+    text-align: right;
+}
+
+.Contact h3 {
+    margin: 10px 0;
+}
+
+.Contact p {
+    margin: 5px 0;
+}
+
+.Contact hr {
+    margin-right: 0;
+    margin-top: 15px;
+    width: 65%;
+}
+
+.Contact .default-btn {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 776px) {
+    .Contact hr {
+        margin: 30px auto 0;
+    }
+
+    .Contact .hours, .Contact .contact-info {
+        margin-top: 20px;
+    }
+}

@@ -27,8 +27,7 @@ class Gallery extends React.Component {
     constructor(props) {
         super(props);
         this.imgContainer = React.createRef()
-        this.myTest = this.myTest.bind(this);
-        // this.myTest.bind(this);
+        this.imgHandler = this.imgHandler.bind(this);
     }
 
     state = {
@@ -37,7 +36,6 @@ class Gallery extends React.Component {
     }
 
     componentDidMount () {
-        // console.log(this.imgContainer.current.childNodes);
         this.setState({imgBoxes: this.imgContainer.current.childNodes})
     }
 
@@ -59,31 +57,20 @@ class Gallery extends React.Component {
         }
     }
 
-    myTest (e) {
-        // console.log(e.currentTarget.id)
+    imgHandler (e) {
         if (e.currentTarget.id === this.state.id) {
             e.currentTarget.classList.remove('expand')
             this.setState({id: null})
             this.removeFade();
         } else {
-            // console.log('different');
             e.currentTarget.classList.add('expand')
             this.setState({id: e.currentTarget.id})
             for(let i=0; i<this.state.imgBoxes.length; i++) {
-                if( (e.currentTarget.id != this.state.imgBoxes[i].id) && (this.state.imgBoxes[i].classList.contains('expand'))) {
+                if( (e.currentTarget.id !== this.state.imgBoxes[i].id) && (this.state.imgBoxes[i].classList.contains('expand'))) {
                     this.state.imgBoxes[i].classList.remove('expand')
                 }
             }
             this.addFade()
-        }
-        return false;
-
-        console.log(e.currentTarget.id);
-        for(let i=0; i<this.state.imgBoxes.length; i++) {
-            console.log(this.state.imgBoxes[i].id);
-            if(this.state.imgBoxes[i].id==='third') {
-                this.state.imgBoxes[i].classList.add("mystyle");
-            }
         }
     }
 
@@ -92,26 +79,26 @@ class Gallery extends React.Component {
             <section className="Gallery padding-container">
                 <h3 className="txt-ctr">Click on a photo for full view</h3>
                 <div className={ this.state.id ? "grow full-container" : "full-container" } ref={this.imgContainer}>
-                    < ImageBox id="first" img={Img1} meth={this.myTest}/>
-                    < ImageBox id="second" img={Img2} meth={this.myTest}/>
-                    < ImageBox id="third" img={Img3} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img4} meth={this.myTest}/>
-                    < ImageBox id="first" img={Img5} meth={this.myTest}/>
-                    < ImageBox id="second" img={Img6} meth={this.myTest}/>
-                    < ImageBox id="third" img={Img7} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img8} meth={this.myTest}/>
-                    < ImageBox id="first" img={Img9} meth={this.myTest}/>
-                    < ImageBox id="second" img={Img10} meth={this.myTest}/>
-                    < ImageBox id="third" img={Img11} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img12} meth={this.myTest}/>
-                    < ImageBox id="first" img={Img13} meth={this.myTest}/>
-                    {/* < ImageBox id="second" img={Img14} meth={this.myTest}/> */}
-                    < ImageBox id="third" img={Img15} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img16} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img17} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img18} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img19} meth={this.myTest}/>
-                    < ImageBox id="fourth" img={Img20} meth={this.myTest}/>
+                    < ImageBox id="first" img={Img1} meth={this.imgHandler}/>
+                    < ImageBox id="second" img={Img2} meth={this.imgHandler}/>
+                    < ImageBox id="third" img={Img3} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img4} meth={this.imgHandler}/>
+                    < ImageBox id="first" img={Img5} meth={this.imgHandler}/>
+                    < ImageBox id="second" img={Img6} meth={this.imgHandler}/>
+                    < ImageBox id="third" img={Img7} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img8} meth={this.imgHandler}/>
+                    < ImageBox id="first" img={Img9} meth={this.imgHandler}/>
+                    < ImageBox id="second" img={Img10} meth={this.imgHandler}/>
+                    < ImageBox id="third" img={Img11} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img12} meth={this.imgHandler}/>
+                    < ImageBox id="first" img={Img13} meth={this.imgHandler}/>
+                    {/* < ImageBox id="second" img={Img14} meth={this.imgHandler}/> */}
+                    < ImageBox id="third" img={Img15} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img16} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img17} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img18} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img19} meth={this.imgHandler}/>
+                    < ImageBox id="fourth" img={Img20} meth={this.imgHandler}/>
                 </div>
             </section>
         );
