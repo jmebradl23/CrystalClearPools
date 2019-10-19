@@ -101,7 +101,7 @@ class ContactForm extends React.Component {
             <div className="input-box">
               <label>
                 First Name:
-                <input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+                <input focus={true} type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
               </label>
             </div>
             <div className="input-box">

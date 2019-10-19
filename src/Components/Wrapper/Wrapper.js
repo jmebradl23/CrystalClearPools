@@ -11,8 +11,12 @@ import Gallery from '../Gallery/GalleryPage/Gallery';
 
 class Wrapper extends React.Component {
 
-    state = {
-        path: null
+    state = { path: null }
+
+    componentDidMount () {
+        this.setState({path: window.location.pathname});
+        this.updatePath = this.updatePath.bind(this);
+        this.setState({path: window.location.pathname})
     }
 
     componentDidUpdate () {
@@ -20,31 +24,13 @@ class Wrapper extends React.Component {
     }
 
     updatePath (e) {
-        console.log(e.target)
-        if(e.target.nodeName==='LI'||e.target.nodeName==='BUTTON'||e.target.nodeName==='IMG') {
-            if(window.location.pathname !== this.state.path) {
-                this.setState({path: window.location.pathname})
-                console.log('updating')
+        // console.log('data-path is: ', e.target.dataset.div_id)
+        if((e.target.nodeName==='LI' && e.target.classList.contains('path-update'))|| (e.target.nodeName==='BUTTON' && e.target.classList.contains('path-update')) ||(e.target.nodeName==='IMG' && e.target.classList.contains('path-update'))) {
+            if(e.target.dataset.div_id !== this.state.path) {
+                this.setState({path: e.target.dataset.div_id})
             }
         }
     }
-
-    componentDidMount () {
-        this.setState({path: window.location.pathname});
-        this.updatePath = this.updatePath.bind(this);
-    }
-
-    componentWillUnmount () {
-    }
-
-    // componentWillReceiveProps(nextProps) {
-    //     // console.log('cwrp')
-    //     if (nextProps.location !== this.props.location) {
-    //     //   console.log('not same')
-    //     }
-    //   }
-
-
 
     render () {
         return (
@@ -64,10 +50,8 @@ class Wrapper extends React.Component {
                     </div>
                 </Router>
             </div>
-          );
-
+        );
     }
-    
 }
 
 export default Wrapper;

@@ -19,3 +19,9 @@
 .Services p {
     margin-top: 5px;
 }
+
+@media only screen and (max-width: 776px) {
+    .Services .sec1 {
+        background-position: -30px;
+    }
+}

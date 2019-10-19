@@ -18,7 +18,7 @@ class Faq extends React.Component {
                     < QaDetails question={'Why do I need a pool heater?'} answer={"You don't. Heaters are not necessary for you to fully enjoy your swimming pool. They do, however, extend your pool-using days considerably, warming up your swimming pool a lot faster (and sooner) than heat covers. They also allow you to continue using your swimming pool later in the season, when the sun isn't always warm enough to do the job."} />
                     <p>Above are the answers to a few of the most common questions we've come across, as well as a few swimming pool related tips below. If your question is not covered here, or if you would like more information, please do not hesitate to contact Crystal Clear Pool & Spa Service.</p>
                     <Link to='/contact' path='/contact' > 
-                        <button className="default-btn">Contact Us</button>
+                        <button data-div_id='/contact' className="default-btn path-update">Contact Us</button>
                     </Link>
                 </section>
 

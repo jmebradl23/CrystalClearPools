@@ -79,26 +79,26 @@ class Gallery extends React.Component {
             <section className="Gallery padding-container">
                 <h3 className="txt-ctr">Click on a photo for full view</h3>
                 <div className={ this.state.id ? "grow full-container" : "full-container" } ref={this.imgContainer}>
-                    < ImageBox id="first" img={Img1} meth={this.imgHandler}/>
-                    < ImageBox id="second" img={Img2} meth={this.imgHandler}/>
-                    < ImageBox id="third" img={Img3} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img4} meth={this.imgHandler}/>
-                    < ImageBox id="first" img={Img5} meth={this.imgHandler}/>
-                    < ImageBox id="second" img={Img6} meth={this.imgHandler}/>
-                    < ImageBox id="third" img={Img7} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img8} meth={this.imgHandler}/>
-                    < ImageBox id="first" img={Img9} meth={this.imgHandler}/>
-                    < ImageBox id="second" img={Img10} meth={this.imgHandler}/>
-                    < ImageBox id="third" img={Img11} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img12} meth={this.imgHandler}/>
-                    < ImageBox id="first" img={Img13} meth={this.imgHandler}/>
+                    < ImageBox id="1" dimens='wide' img={Img1} meth={this.imgHandler}/>
+                    < ImageBox id="2" dimens='wide' img={Img2} meth={this.imgHandler}/>
+                    < ImageBox id="3" dimens='tall' img={Img3} meth={this.imgHandler}/>
+                    < ImageBox id="4" dimens='wide' img={Img4} meth={this.imgHandler}/>
+                    < ImageBox id="5" dimens='wide' img={Img5} meth={this.imgHandler}/>
+                    < ImageBox id="6" dimens='wide' img={Img6} meth={this.imgHandler}/>
+                    < ImageBox id="7" dimens='wide' img={Img7} meth={this.imgHandler}/>
+                    < ImageBox id="8" dimens='tall' img={Img8} meth={this.imgHandler}/>
+                    < ImageBox id="9" dimens='wide' img={Img9} meth={this.imgHandler}/>
+                    < ImageBox id="10" dimens='wide' img={Img10} meth={this.imgHandler}/>
+                    < ImageBox id="11" dimens='wide' img={Img11} meth={this.imgHandler}/>
+                    < ImageBox id="12" dimens='wide' img={Img12} meth={this.imgHandler}/>
+                    < ImageBox id="13" dimens='wide' img={Img13} meth={this.imgHandler}/>
                     {/* < ImageBox id="second" img={Img14} meth={this.imgHandler}/> */}
-                    < ImageBox id="third" img={Img15} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img16} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img17} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img18} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img19} meth={this.imgHandler}/>
-                    < ImageBox id="fourth" img={Img20} meth={this.imgHandler}/>
+                    < ImageBox id="14" dimens='wide' img={Img15} meth={this.imgHandler}/>
+                    < ImageBox id="15" dimens='wide' img={Img16} meth={this.imgHandler}/>
+                    < ImageBox id="16" dimens='wide' img={Img17} meth={this.imgHandler}/>
+                    < ImageBox id="17" dimens='wide' img={Img18} meth={this.imgHandler}/>
+                    < ImageBox id="18" dimens='tall' img={Img19} meth={this.imgHandler}/>
+                    < ImageBox id="19" dimens='wide' img={Img20} meth={this.imgHandler}/>
                 </div>
             </section>
         );

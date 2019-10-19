@@ -44,7 +44,7 @@ class ImageBox extends React.Component {
 
     render () {
         return (
-            <div id={this.props.id} className={ this.state.expand ? "expand img-container" : "img-container" } onClick={this.props.meth}>
+            <div id={this.props.id} className={ this.state.expand ? `expand img-container ${this.props.dimens}` : `img-container ${this.props.dimens}` } onClick={this.props.meth}>
                 <p className="close">x</p>
                 <img src={this.props.img} alt="" />
             </div>

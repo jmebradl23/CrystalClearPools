@@ -1,5 +1,5 @@
 .faq .sec1 {
-    background-image: url('/background8.jpg');
+    background-image: url('/background10.jpg');
 }
 
 .sec2 {
@@ -10,4 +10,10 @@
     width: 100%;
     border-width: 1px;
     margin: 25px auto;
+}
+
+@media only screen and (max-width: 776px) {
+    .faq .sec1 {
+        background-position: -324px;
+    }
 }

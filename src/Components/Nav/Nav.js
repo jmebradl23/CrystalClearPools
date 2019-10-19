@@ -26,16 +26,18 @@ class Nav extends React.Component {
         this.setState({path: this.props.path});
     }
 
-    componentWillUnmount () {
-        window.removeEventListener('scroll', this.updateNavbar);
-        window.removeEventListener('resize', this.updateNavbar);
-    }
-
     componentDidUpdate() {
-        if(window.location.pathname !== this.state.path) {
-            this.setState({path: window.location.pathname})
+        console.log(this.props.path)
+        if(this.props.path !== this.state.path) {
+            this.setState({path: this.props.path})
         }
     }
+
+    // componentWillReceiveProps () {
+    //     if(this.state.path !== this.props.path) {
+    //         this.setState({path: window.location.pathname})
+    //     }
+    // }
     
     toggleDropdown () {
         this.setState(prevState => ({
@@ -64,9 +66,9 @@ class Nav extends React.Component {
         return (
             <nav id="topNav" className={ this.state.smallNav ? "black" : "" }>
                 <ul className="nav-links"></ul>
-                <Link to='/' onClick={this.test} data-div_id={null}>
+                <Link to='/' onClick={this.test} >
                     <div className="logo">
-                        <img src={logo} alt="Company logo"/>
+                        <img className="path-update" data-div_id={null} src={logo} alt="Company logo" onClick={this.closeDropdown} />
                     </div>
                 </Link>
                 {/* <a href="/">
@@ -80,20 +82,20 @@ class Nav extends React.Component {
                 <div className="container">
                     <div className={ this.state.dropdown ? "slider opened" : "slider closed" }>
                         <ul className="nav-links">
-                            <Link to='/about' className={this.state.path==='/about'? 'active about': 'about'} onClick={this.closeDropdown} data-div_id={'about'}> 
-                                <li>About</li>
+                            <Link to='/about' className={this.state.path==='/about'? 'active about': 'about'} onClick={this.closeDropdown} > 
+                                <li data-div_id='/about' className="path-update">About</li>
                             </Link>
-                            <Link to='/services' className={this.state.path==='/services'? 'active services': 'services'} onClick={this.closeDropdown} data-div_id={'services'}> 
-                                <li>Services</li>
+                            <Link to='/services' className={this.state.path==='/services'? 'active services': 'services'} onClick={this.closeDropdown} > 
+                                <li data-div_id='/services' className="path-update">Services</li>
                             </Link>
-                            <Link to='/faq' className={this.state.path==='/faq'? 'active faq': 'faq'} onClick={this.closeDropdown} data-div_id={'faq'}>
-                                <li>FAQ</li>
+                            <Link to='/faq' className={this.state.path==='/faq'? 'active faq': 'faq'} onClick={this.closeDropdown} >
+                                <li data-div_id='/faq' className="path-update">FAQ</li>
                             </Link>
-                            <Link to='/gallery' className={this.state.path==='/gallery'? 'active gallery': 'gallery'} onClick={this.closeDropdown} data-div_id={'gallery'}>
-                                <li>Gallery</li>
+                            <Link to='/gallery' className={this.state.path==='/gallery'? 'active gallery': 'gallery'} onClick={this.closeDropdown} >
+                                <li data-div_id='/gallery' className="path-update">Gallery</li>
                             </Link>
-                            <Link to='/contact' className={this.state.path==='/contact'? 'active contact': 'contact'} onClick={this.closeDropdown} data-div_id={'contact'}>
-                                <li>Contact</li>
+                            <Link to='/contact' className={this.state.path==='/contact'? 'active contact': 'contact'} onClick={this.closeDropdown} >
+                                <li data-div_id='/contact' className="path-update">Contact</li>
                             </Link>
                         </ul>
                     </div>

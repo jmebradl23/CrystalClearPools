@@ -1,5 +1,6 @@
 .Contact .sec1 {
-    background-image: url('/background10.jpg');
+    background-image: url('/background14.jpg');
+    height: 50vh;
 }
 
 .Contact .half {
@@ -55,4 +56,8 @@
     .Contact .hours, .Contact .contact-info {
         margin-top: 20px;
     }
+
+    /* .Contact .sec1 {
+        background-position: -430px;
+    } */
 }
