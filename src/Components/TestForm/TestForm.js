@@ -26,7 +26,7 @@ function TestForm() {
   const handleSubmit = e => {
     const data = { "form-name": "contact", name, email, message, file }
     
-    fetch("/", {
+    fetch("/contact", {
       method: "POST",
       // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
       body: encode(data)
@@ -56,7 +56,7 @@ function TestForm() {
     {/* <form name="contact" method="post" action="/helloworld"> */}
     {/* <input type="hidden" name="form-name" value="contact" /> */}
 
-    <form name="contact" method="post" onSubmit={handleSubmit} action="/thank-you/">
+    <form name="contact" method="POST" onSubmit={handleSubmit} action="/services">
         <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
