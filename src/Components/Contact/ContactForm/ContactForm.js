@@ -1,7 +1,12 @@
-import React from 'react';
+// import React from 'react';
 import './ContactForm.css';
 
-class ContactForm extends React.Component {
+
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
+
+class ContactForm extends Component {
+// class ContactForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -100,6 +105,7 @@ class ContactForm extends React.Component {
       if(!(this.checkEmail(this.state.email))) { this.addErrorMsg('email') } else { this.removeErrorMsg('email')}
       if(!(this.checkPhone(this.state.phone))) { this.addErrorMsg('phone') } else { this.removeErrorMsg('phone')}
       if((!(this.checkText(this.state.firstName))) || (!(this.checkText(this.state.lastName))) || (!(this.checkText(this.state.message)))) { this.addErrorMsg('text') } else { this.removeErrorMsg('text')}
+      this.props.history.push('/');
     }
   
     render() {
@@ -196,4 +202,5 @@ class ContactForm extends React.Component {
     }
   }
 
-  export default ContactForm;
+  // export default ContactForm;
+  export default withRouter(ContactForm);
