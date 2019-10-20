@@ -63,7 +63,7 @@ function TestForm() {
           </p>
           <p>
             <label>
-              Your Email: <input type="email" name="email" value={email} onChange={handleChange} />
+              Your Email: <input type="text" name="email" value={email} onChange={handleChange} />
             </label>
           </p>
           <p>
