@@ -155,7 +155,17 @@ class ContactForm extends React.Component {
     <input type="hidden" name="form-name" value="contact" />
     <p>
       <label>
-        Your Name: <input type="text" name="firstName" />
+        Your First Name: <input ref={this.textInput} type="text" name="firstName" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Your Last Name: <input type="text" name="lastName" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Your Phone: <input type="text" name="phone" />
       </label>
     </p>
     <p>
