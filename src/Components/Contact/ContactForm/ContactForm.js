@@ -188,7 +188,7 @@ class ContactForm extends Component {
               <div data-netlify-recaptcha="true"></div>
             </div> */}
     <p>
-      <button onClick={this.handleSubmit} type="submit">Send</button>
+      <button type="button">Send</button>
     </p>
   </form>
 
