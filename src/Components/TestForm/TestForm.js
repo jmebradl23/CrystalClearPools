@@ -52,11 +52,9 @@ function TestForm() {
 
   return (
     <div className="TestForm">
+    {/* <form onSubmit={handleSubmit} action="/thank-you/"> */}
 
-    {/* <form name="contact" method="post" action="/helloworld"> */}
-    <input type="hidden" name="form-name" value="contact" />
-
-    <form name="contact" method="post" onSubmit={handleSubmit} action="/thank-you/">
+    <form onSubmit={handleSubmit} name="contact" method="post" action="/contact">
         <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
@@ -85,7 +83,7 @@ function TestForm() {
             <button type="submit">Send</button>
           </p>
         </form>
-        <h3 className={status==="Form Submission Failed" ? "fail":"success"}>{status}</h3>
+        <h3>{status}</h3>
     </div>
   );
 }
