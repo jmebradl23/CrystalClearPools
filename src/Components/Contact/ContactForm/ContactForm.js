@@ -143,6 +143,9 @@ class ContactForm extends React.Component {
                 <input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
               </label>
             </div>
+            <div className="input-box">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
             <input className="default-btn" type="submit" value="Submit" />
           </form>
         </div>
