@@ -212,7 +212,7 @@ class ContactForm extends React.Component {
 <form onSubmit={this.handleSubmit2}>
           <p>
             <label>
-              Your Name: <input type="text" name="firstName" value={firstName} onChange={this.handleChange} />
+              Your FIRST Name: <input type="text" name="firstName" value={firstName} onChange={this.handleChange} />
             </label>
           </p>
           <p>
