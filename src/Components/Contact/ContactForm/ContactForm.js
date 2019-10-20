@@ -112,7 +112,8 @@ class ContactForm extends React.Component {
               </p>
             )}
           </div>
-          <form action="POST" data-netlify="true" onSubmit={this.handleSubmit}>
+          {/* <form action="POST" data-netlify="true" onSubmit={this.handleSubmit}>
+            <input type="hidden" name="form-name" value="contact-form" />
             <div className="input-box">
               <label>
                 First Name:
@@ -147,7 +148,36 @@ class ContactForm extends React.Component {
               <div data-netlify-recaptcha="true"></div>
             </div>
             <input className="default-btn" type="submit" value="Submit" />
-          </form>
+          </form> */}
+
+
+<form name="contact" method="post">
+    <input type="hidden" name="form-name" value="contact" />
+    <p>
+      <label>
+        Your Name: <input type="text" name="firstName" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Your Email: <input type="email" name="email" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Message: <textarea name="message"></textarea>
+      </label>
+    </p>
+    <p>
+      <button type="submit">Send</button>
+    </p>
+  </form>
+
+
+
+
+
+
         </div>
       );
     }
