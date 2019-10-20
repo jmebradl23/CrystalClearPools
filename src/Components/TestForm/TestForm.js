@@ -52,7 +52,12 @@ function TestForm() {
 
   return (
     <div className="TestForm">
-    <form onSubmit={handleSubmit} action="/thank-you/">
+
+    {/* <form name="contact" method="post" action="/helloworld"> */}
+    {/* <input type="hidden" name="form-name" value="contact" /> */}
+
+    <form name="contact" method="post" onSubmit={handleSubmit} action="/thank-you/">
+        <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
               Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
@@ -60,7 +65,7 @@ function TestForm() {
           </p>
           <p>
             <label>
-              Your Email: <input type="email" name="email" value={email} onChange={handleChange} />
+              Your Email: <input type="text" name="email" value={email} onChange={handleChange} />
             </label>
           </p>
           <p>

@@ -1,29 +1,22 @@
 import React from 'react';
 import './ContactForm.css';
 
-const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-
 class ContactForm extends React.Component {
     constructor(props) {
       super(props);
-      // this.state = {
-      //   firstName: '',
-      //   lastName: '',
-      //   phone: '',
-      //   email: '', 
-      //   message: '',
-      //   errorMessages : {
-      //     email: 'Email is invalid',
-      //     phone: 'Phone is invalid',
-      //     text: 'Fields must be at least 3 characters'
-      //   },
-      //   activeErrors: []
-      // }
-      this.state = { firstName: "", lastName: "", email: "", phone: "", message: "" };
+      this.state = {
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '', 
+        message: '',
+        errorMessages : {
+          email: 'Email is invalid',
+          phone: 'Phone is invalid',
+          text: 'Fields must be at least 3 characters'
+        },
+        activeErrors: []
+      }
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -108,25 +101,8 @@ class ContactForm extends React.Component {
       if(!(this.checkPhone(this.state.phone))) { this.addErrorMsg('phone') } else { this.removeErrorMsg('phone')}
       if((!(this.checkText(this.state.firstName))) || (!(this.checkText(this.state.lastName))) || (!(this.checkText(this.state.message)))) { this.addErrorMsg('text') } else { this.removeErrorMsg('text')}
     }
-
-    handleSubmit2 = e => {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
-      })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
-
-      e.preventDefault();
-    };
-
-    handleChange = e => this.setState({ [e.target.name]: e.target.value });
   
     render() {
-
-      const { name, email, message } = this.state;
-      
       return (
         <div>
           <div className={this.state.activeErrors.length ? 'error-msgs' : 'hidden'}>
@@ -175,7 +151,7 @@ class ContactForm extends React.Component {
           </form> */}
 
 
-{/* <form name="contact" method="post" action="/helloworld">
+<form name="contact" method="post" action="/helloworld">
     <input type="hidden" name="form-name" value="contact" />
     <p>
       <label>
@@ -205,40 +181,7 @@ class ContactForm extends React.Component {
     <p>
       <button type="submit">Send</button>
     </p>
-  </form> */}
-
-
-
-<form onSubmit={this.handleSubmit2}>
-          <p>
-            <label>
-              FIRST Name: <input type="text" name="firstName" value={firstName} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Name: <input type="text" name="lastName" value={lastName} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="text" name="email" value={email} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Phone: <input type="text" name="phone" value={phone} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name="message" value={message} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+  </form>
 
 
 
