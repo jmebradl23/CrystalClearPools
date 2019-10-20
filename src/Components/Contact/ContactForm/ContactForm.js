@@ -157,7 +157,7 @@ class ContactForm extends Component {
           </form> */}
 
 
-<form name="contact" method="post">
+<form name="contact" method="post" onSubmit={this.handleSubmit} >
     <input type="hidden" name="form-name" value="contact" />
     <p>
       <label>
