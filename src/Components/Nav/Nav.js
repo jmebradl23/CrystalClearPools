@@ -74,7 +74,7 @@ class Nav extends React.Component {
                             </li>
                         </Link>
                         <li>
-                            <p>Tel: 707-252-8255</p>
+                            <p>Tel: (707) 252-8255</p>
                         </li>
                     {/* </ul> */}
                     {/* <ul className="hamburger sm-show right"> */}

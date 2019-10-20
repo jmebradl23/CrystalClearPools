@@ -112,7 +112,7 @@ class ContactForm extends React.Component {
               </p>
             )}
           </div>
-          <form onSubmit={this.handleSubmit}>
+          <form action="POST" data-netlify="true" onSubmit={this.handleSubmit}>
             <div className="input-box">
               <label>
                 First Name:
