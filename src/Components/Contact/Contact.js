@@ -1,7 +1,8 @@
 import React from 'react';
 import './Contact.css';
 import '../../main.css';
-import ContactForm from './ContactForm/ContactForm';
+// import ContactForm from './ContactForm/ContactForm';
+import TestForm from '../TestForm/TestForm';
 
 function Contact (props) {
   return (
@@ -11,7 +12,8 @@ function Contact (props) {
 			<div className="duet-flex">
 				<div className="half">
 					<h3>Contact Us</h3>
-					< ContactForm />
+					{/* < ContactForm /> */}
+					< TestForm />
 					{/* <form >
 						<div className="input-box">
 							<label for="firstname">First Name</label>
