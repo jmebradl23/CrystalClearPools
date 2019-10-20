@@ -151,7 +151,7 @@ class ContactForm extends React.Component {
           </form> */}
 
 
-<form name="contact" method="post" data-netlify="true">
+<form name="contact" method="post">
     <input type="hidden" name="form-name" value="contact" />
     <p>
       <label>
@@ -178,9 +178,9 @@ class ContactForm extends React.Component {
         Message: <textarea name="message"></textarea>
       </label>
     </p>
-    <div className="input-box">
+    {/* <div className="input-box">
               <div data-netlify-recaptcha="true"></div>
-            </div>
+            </div> */}
     <p>
       <button type="submit">Send</button>
     </p>
