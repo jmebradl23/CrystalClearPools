@@ -24,15 +24,15 @@ function TestForm() {
   }
 
   const handleSubmit = e => {
-    const data = { "form-name": "contact", name, email, message }
+    const data = { "form-name": "contact", name, email, message, file }
     
-    fetch("/contact", {
+    fetch("/", {
       method: "POST",
       // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
       body: encode(data)
     })
-      .then(() => setStatus("Form Submission Successful!"))
-      .catch(error => setStatus("Form Submission Failed"));
+      .then(() => setStatus("Form Submission Successful!!"))
+      .catch(error => setStatus("Form Submission Failed!"));
 
     e.preventDefault();
   };
@@ -54,14 +54,9 @@ function TestForm() {
     <div className="TestForm">
 
     {/* <form name="contact" method="post" action="/helloworld"> */}
-    {/* <input type="hidden" name="form-name" value="contact" /> */}
+    <input type="hidden" name="form-name" value="contact" />
 
-    <form 
-        name="contact"
-        method="POST"
-        onSubmit={handleSubmit}
-        // action="/services" <--- Doesn't work
-        >
+    <form name="contact" method="post" onSubmit={handleSubmit} action="/thank-you/">
         <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
@@ -70,7 +65,7 @@ function TestForm() {
           </p>
           <p>
             <label>
-              Your Email: <input type="text" name="email" value={email} onChange={handleChange} />
+              Your Email: <input type="email" name="email" value={email} onChange={handleChange} />
             </label>
           </p>
           <p>
