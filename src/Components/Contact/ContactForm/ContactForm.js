@@ -101,7 +101,7 @@ class ContactForm extends Component {
     }
   
     handleSubmit(event) {
-      event.preventDefault();
+      // event.preventDefault();
       if(!(this.checkEmail(this.state.email))) { this.addErrorMsg('email') } else { this.removeErrorMsg('email')}
       if(!(this.checkPhone(this.state.phone))) { this.addErrorMsg('phone') } else { this.removeErrorMsg('phone')}
       if((!(this.checkText(this.state.firstName))) || (!(this.checkText(this.state.lastName))) || (!(this.checkText(this.state.message)))) { this.addErrorMsg('text') } else { this.removeErrorMsg('text')}
@@ -157,7 +157,7 @@ class ContactForm extends Component {
           </form> */}
 
 
-<form name="contact" method="post" onSubmit={this.handleSubmit} >
+<form name="contact" method="post" >
     <input type="hidden" name="form-name" value="contact" />
     <p>
       <label>
@@ -188,7 +188,7 @@ class ContactForm extends Component {
               <div data-netlify-recaptcha="true"></div>
             </div> */}
     <p>
-      <button type="submit">Send</button>
+      <button onClick={this.handleSubmit} type="submit">Send</button>
     </p>
   </form>
 
