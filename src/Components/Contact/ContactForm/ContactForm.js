@@ -170,7 +170,7 @@ class ContactForm extends React.Component {
     </p>
     <p>
       <label>
-        Your Email: <input type="email" name="email" />
+        Your Email: <input type="text" name="email" />
       </label>
     </p>
     <p>
