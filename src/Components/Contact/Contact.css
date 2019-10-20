@@ -49,6 +49,14 @@
     border: 1px solid black;
 }
 
+.Contact .fail {
+    color: red;
+}
+
+.Contact .success {
+    color: forestgreen;
+}
+
 @media only screen and (max-width: 776px) {
     .Contact hr {
         margin: 30px auto 0;
