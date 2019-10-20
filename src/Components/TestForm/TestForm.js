@@ -54,7 +54,7 @@ function TestForm() {
     <div className="TestForm">
     {/* <form onSubmit={handleSubmit} action="/thank-you/"> */}
 
-    <form onSubmit={handleSubmit} name="contact" method="post" action="/contact">
+    <form onSubmit={handleSubmit} name="contact" method="POST" action="/contact">
         <input type="hidden" name="form-name" value="contact" />
           <p>
             <label>
