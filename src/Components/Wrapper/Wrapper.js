@@ -24,8 +24,9 @@ class Wrapper extends React.Component {
     }
 
     updatePath (e) {
+        console.log(e.target.nodeName)
         // console.log('data-path is: ', e.target.dataset.div_id)
-        if((e.target.nodeName==='LI' && e.target.classList.contains('path-update'))|| (e.target.nodeName==='BUTTON' && e.target.classList.contains('path-update')) ||(e.target.nodeName==='IMG' && e.target.classList.contains('path-update'))) {
+        if (((e.target.nodeName==='LI') || (e.target.nodeName==='IMG')) && ( e.target.classList.contains('path-update'))) {
             if(e.target.dataset.div_id !== this.state.path) {
                 this.setState({path: e.target.dataset.div_id})
             }

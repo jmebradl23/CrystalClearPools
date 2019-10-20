@@ -7,7 +7,7 @@ function Contact (props) {
   return (
     <div className="Contact">
 		<section className='sec1 sec-img'></section>
-		<section id="question-list faq" className="mt-100 padding-container">
+		<section className="padding-container">
 			<div className="duet-flex">
 				<div className="half">
 					<h3>Contact Us</h3>
@@ -36,8 +36,8 @@ function Contact (props) {
 						<input className="default-btn" type="submit" value="Submit"></input>
 					</form>  */}
 				</div>
-				<hr className="lg-hidden"></hr>
-				<div className="half right">
+				{/* <hr className="lg-hidden"></hr> */}
+				<div className="half text-right">
 					<div className="">
 						<div className="contact-info">
 							<h3>Contact Information</h3>
@@ -47,7 +47,7 @@ function Contact (props) {
 							<p>Text: 707-320-7009</p>
 							<p>Email: <a href="mailto:info@ccpoolspa.expert">info@ccpoolspa.expert</a></p>
 						</div>
-						<hr className="right"></hr>
+						<hr></hr>
 						<div className="hours">
 							<h3>Hours of Service</h3>
 							<p>Monday to Thursday: 10:00AM - 6:00PM</p>

@@ -20,6 +20,11 @@ class ContactForm extends React.Component {
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.textInput = React.createRef();
+    }
+
+    componentDidMount () {
+      this.textInput.current.focus();
     }
   
     handleChange(event) {
@@ -29,6 +34,7 @@ class ContactForm extends React.Component {
     }
 
     checkEmail (email) {
+      console.log(email)
       if (!(email)) {return false};
       if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
         return true;
@@ -37,7 +43,6 @@ class ContactForm extends React.Component {
 
     checkPhone (phone) {
       if ((!(phone))|| (phone=='')) {console.log('phone is empty'); return false};
-      // var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
       if(phone.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/)) {
         return true;
       } else { return false }
@@ -62,12 +67,23 @@ class ContactForm extends React.Component {
     removeErrorMsg (str) {
       let msg = this.state.errorMessages[str];
       console.log(msg);
-      let index = this.state.activeErrors.indexOf(msg);
-      let newArr = [...this.state.activeErrors]
-      if (index !== -1) {
-        newArr.splice(index, 1);
-        this.setState({activeErrors: newArr});
-      }
+
+      this.setState(prevState => ({ 
+        activeErrors: prevState.activeErrors.filter (err => err !== msg) }))
+
+
+
+
+
+      // this.setState(prevState => ({
+      //   activeErrors: [...prevState.activeErrors, msg]
+      // }))
+      // let index = this.state.activeErrors.indexOf(msg);
+      // let newArr = [...this.state.activeErrors]
+      // if (index !== -1) {
+      //   newArr.splice(index, 1);
+      //   this.setState({activeErrors: newArr});
+      // }
 
 
 
@@ -84,7 +100,6 @@ class ContactForm extends React.Component {
       if(!(this.checkEmail(this.state.email))) { this.addErrorMsg('email') } else { this.removeErrorMsg('email')}
       if(!(this.checkPhone(this.state.phone))) { this.addErrorMsg('phone') } else { this.removeErrorMsg('phone')}
       if((!(this.checkText(this.state.firstName))) || (!(this.checkText(this.state.lastName))) || (!(this.checkText(this.state.message)))) { this.addErrorMsg('text') } else { this.removeErrorMsg('text')}
-      console.log('this state errors is : ', this.state.activeErrors)
     }
   
     render() {
@@ -101,7 +116,7 @@ class ContactForm extends React.Component {
             <div className="input-box">
               <label>
                 First Name:
-                <input focus={true} type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+                <input ref={this.textInput} focus={true} type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
               </label>
             </div>
             <div className="input-box">

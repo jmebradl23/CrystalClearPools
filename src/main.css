@@ -62,16 +62,28 @@ section.padding-container {
     color: #000;
 }
 
-.left {
+.flex-left {
   order: 1
 }
 
-.right {
+.flex-right {
   order: 2;
 }
 
 .hidden {
   display: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .default-btn {
@@ -80,11 +92,23 @@ section.padding-container {
   transition: .5s;
   width: 200px;
   height: 40px;
+  line-height: 40px;
   font-size: 18px;
   border-radius: 5px;
   margin: 0 auto;
   display: block;
   border: 1px solid black;
+  text-align: center;
+
+  text-decoration: none;
+}
+
+a .default-btn {
+  text-decoration: none;
+}
+
+li.default-btn {
+  text-decoration: none;
 }
 
 .default-btn:hover {
