@@ -36,8 +36,8 @@ function Footer () {
                         <img src={Discover} alt="Discover"/>
                     </div>
                 </div>
+                <div className="left txt-sm">Site design by hintonbradley</div>
             </div>
-            <div className="left txt-sm">Site design by hintonbradley</div>
         </section>
     );
 }
