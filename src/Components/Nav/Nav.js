@@ -69,11 +69,11 @@ class Nav extends React.Component {
                 <div className="flex-left">
                     <ul className="duet-flex">
                         <Link to='/' onClick={this.closeDropdown} >
-                            <li>
+                            <li className="sm-no-pad">
                                 <img className="logo path-update" data-div_id={null} src={logo} alt="Company logo" onClick={this.closeDropdown} />
                             </li>
                         </Link>
-                        <li>
+                        <li className="sm-no-pad">
                             <p>Tel: (707) 252-8255</p>
                         </li>
                     {/* </ul> */}

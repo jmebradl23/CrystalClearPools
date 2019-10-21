@@ -194,3 +194,15 @@ nav ul a.active {
     }
 
 }
+
+@media only screen and (max-width: 450px) {
+    .Nav.nav-sm p {
+        font-size: 12px;
+    }
+
+    .Nav.nav-sm .logo {
+        width: 100px;
+        height: 50px;
+        margin-top: 11px;
+    }
+}
