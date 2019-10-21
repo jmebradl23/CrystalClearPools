@@ -1,114 +1,44 @@
 .Carousel {
-    height: 100vh;
     width: 100vw;
     margin-top: 120px;
 }
-/*Slider*/
-.Carousel .simple-carousel ul.carousel {
-	/*centering carousel*/
-	position: relative;
-	margin: auto;
-	text-align: center;
-}
 
-.Carousel .simple-carousel ul.carousel li {
-	/*centering slides*/
-	position: absolute;
-	left: 0;
-	right: 0;
-}
-
-.Carousel .simple-carousel ul.carousel li img {
-	/*resizing images so left and right slides can be displayed behind main*/
-    /* width: 60%; */
-    min-height: 0px;
+.Carousel .triplet-flex {
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    min-height: 0;
     max-height: 80vh;
-    max-width: 90vw;
+    overflow: scroll;
 }
 
-.Carousel .simple-carousel .main-slide {
-	z-index: 20;
+.Carousel .carousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-shrink: 1;
 }
 
-.Carousel .simple-carousel ul.carousel li.left-slide {
-  opacity: .3;
-  z-index: 10;
-  /*reducing size and moving to left*/
-  -webkit-transform: scale(.75) translate(-15vw,50%);
-  -moz-transform: scale(.75) translate(-15vw,50%);
-  transform: scale(.75) translate(-15vw,50%);
-}
-
-.Carousel .simple-carousel ul.carousel li.right-slide {
-	opacity: .3;
-	z-index: 10;
-	/*reducing size and moving to right*/
-	-webkit-transform: scale(.75) translate(15vw,50%);
-	-moz-transform: scale(.75) translate(15vw,50%);
-	transform: scale(.75) translate(15vw,50%);
-}
-
-/* .simple-carousel ul.carousel li.back-slide {
-	visibility: hidden;
-} */
-/*End Slider*/
-
-/*Direction Buttons*/
-.Carousel .simple-carousel .direction-btn {
-	position: relative;
-	z-index: 30;
-	display: inline-block;
-    margin-top: 16.5vw;
-    transform: translateY(50%);
-	width: 8%;
-}
-
-.Carousel .simple-carousel .direction-btn img {
-	width: 100%;
-    height: auto;
-    background: #fff;
+.Carousel .direction-btn img {
+    width: 10vw;
+    max-width: 150px;
+    min-width: 50px;
+    cursor: pointer;
     border-radius: 50%;
 }
 
-.Carousel .simple-carousel .direction-btn.prev {
-    float: left;
-    margin-left: 5vw;
+.Carousel .direction-btn img:hover {
+    background: lightgrey;
+    transition: .5s;
 }
 
-.Carousel .simple-carousel .direction-btn.next {
-	float: right;
-	margin-right: 5vw;
-}
-/*End Direction Buttons*/
-
-.Carousel .right-slide img, .left-slide img {
-    width: 300px;
-    height: 300px;
-}
-
-.Carousel .right-slide img {
-    margin-right: -25%;
-}
-
-.Carousel .left-slide img {
-    margin-right: 25%;
-}
-
-
-
-/*Bullets*/
-.Carousel .simple-carousel .img-blts li {
-	display: inline-block;
-}
-
-.Carousel .simple-carousel ul.img-blts {
-	padding: 0px;
-	position: absolute;
-    margin-top: 45vw;
+.Carousel img {
+    max-width: 800vw;
     width: 100%;
-    text-align: center;
 }
-.Carousel .bullet-hilight {
-	color: red;
+
+@media only screen and (max-width: 776px) {
+    .Carousel .triplet-flex {
+        display: flex;
+    }
 }
-/*End Bullets*/

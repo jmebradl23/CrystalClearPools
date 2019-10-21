@@ -8,7 +8,7 @@ import Footer from '../Footer/Footer';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 // import Gallery from '../Gallery/GalleryPage/Gallery';
-import Gallery from '../Gallery/Gallery2/Gallery2';
+import Gallery from '../Carousel/Carousel';
 
 class Wrapper extends React.Component {
 
