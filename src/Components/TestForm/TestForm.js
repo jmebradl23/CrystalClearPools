@@ -80,7 +80,7 @@ function TestForm() {
             }
           </div> */}
           <p>
-            <button type="submit">Send</button>
+            <button className="default-btn" type="submit">Send</button>
           </p>
         </form>
         <h3>{status}</h3>

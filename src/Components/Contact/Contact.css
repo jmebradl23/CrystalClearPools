@@ -16,11 +16,15 @@
     width: 100%;
 }
 
-.Contact input {
+.Contact input, .Contact textarea {
     width: 90%;
     height: 25px;
     border-radius: 10px;
     border:1px solid #000
+}
+
+.Contact textarea {
+    height: 75px;
 }
 
 .Contact .right {

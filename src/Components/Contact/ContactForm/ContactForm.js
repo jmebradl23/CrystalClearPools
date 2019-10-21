@@ -179,7 +179,7 @@ class ContactForm extends React.Component {
       </label>
     </p>
     <p>
-      <button type="submit">Send</button>
+      <button className="default-btn" type="submit">Send</button>
     </p>
   </form>
 
