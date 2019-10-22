@@ -1,0 +1,21 @@
+.default-btn {
+    color: white;
+    background: #3651a4;
+    transition: .5s;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .default-btn:hover {
+    color: black;
+    background: #A8DCF2;
+    cursor: pointer;
+  }

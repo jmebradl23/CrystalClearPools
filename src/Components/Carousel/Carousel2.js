@@ -1,13 +1,9 @@
 import React from 'react';
 import './Carousel2.css';
-// import Img1 from '../../img/gallery/img1.jpg';
-import Img from '../../img/gallery/001.jpg';
-import Img3 from '../../img/gallery/002.jpg';
-import Img2 from '../../img/gallery/003tall.jpg';
- 
-import Right from "../../img/gallery/right.png";
-import Left from "../../img/gallery/left.png";
+import Button from '../Button/Button';
 import Img1 from '../../img/gallery/001.jpg';
+import Img2 from '../../img/gallery/003tall.jpg';
+import Img3 from '../../img/gallery/002.jpg';
 import Img4 from '../../img/gallery/004.jpg';
 import Img5 from '../../img/gallery/005.jpg';
 import Img6 from '../../img/gallery/006.jpg';
@@ -77,10 +73,10 @@ class Carousel extends React.Component {
 
     render () {
         return (
-            <section className="section-images sm-show">
-                <ul class="duet-flex">
-                    <li className="default-btn" onClick={this.decreaseHandler} >Prev</li>
-                    <li className="default-btn" onClick={this.increaseHandler} >Next</li>
+            <section className="section-images sm-show Carousel">
+                <ul class="duet-flex btn-list">
+                    < Button text="Prev" classes="default-btn" method={this.decreaseHandler} />
+                    < Button text="Next" classes="default-btn" method={this.increaseHandler} />
                 </ul>
                     <img src={this.state.images[this.state.mainImg]} />
             </section>

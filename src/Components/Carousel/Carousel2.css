@@ -1,26 +1,30 @@
 
-  .section-images {
+  .Carousel.section-images {
     /* margin: auto 2em; */
-    margin: 100px 0 0 0 ;
+    margin: 120px 0 0 0 ;
     text-align: center;
     height: 80vh;
   }
 
-  .section-images .duet-flex {
+  .Carousel.section-images .duet-flex {
     justify-content: center;
   }
 
-  .section-images ul {
+  .Carousel.section-images ul {
       list-style: none;
       padding-left: 0;
   }
 
-  .section-images li {
+  .Carousel.section-images li {
       margin: 0 3vw 0;
       max-width: 100px;
   }
 
-  img {
+  .Carousel.section-images li.default-btn:hover {
+    cursor: pointer;
+  }
+
+  .Carousel img {
     display: block;
     width: auto;
     height: auto;
@@ -31,11 +35,11 @@
   }
 
   @media only screen and (max-width: 776px) {
-      .section-images {
+      .Carousel.section-images {
         height: 100%;
       }
 
-      .duet-flex {
+      .Carousel .duet-flex {
           display: flex;
       }
   }

@@ -1,0 +1,7 @@
+.Contact .fail {
+    color: red;
+}
+
+.Contact .success {
+    color: forestgreen;
+}

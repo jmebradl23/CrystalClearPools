@@ -1,4 +1,6 @@
 import React, {useState, useCallback} from 'react';
+import Button from "../Button/Button";
+import './TestForm.css';
 // import {useDropzone} from 'react-dropzone'
 
 
@@ -31,8 +33,8 @@ function TestForm() {
       // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
       body: encode(data)
     })
-      .then(() => setStatus("Form Submission Successful!!"))
-      .catch(error => setStatus("Form Submission Failed!"));
+      .then(() => setStatus("Form Submission Successful"))
+      .catch(error => setStatus("Form Submission Failed"));
 
     e.preventDefault();
   };
@@ -80,10 +82,11 @@ function TestForm() {
             }
           </div> */}
           <p>
-            <button className="default-btn" type="submit">Send</button>
+            {/* <button className="default-btn" type="submit">Send</button> */}
+            < Button text="Send" type="submit" classes="default-btn" />
           </p>
         </form>
-        <h3>{status}</h3>
+        <h3 className={status==="Form Submission Successful" ? 'success' : 'fail'} >{status}</h3>
     </div>
   );
 }

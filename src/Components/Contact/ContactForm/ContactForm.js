@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactForm.css';
+import Button from "../../Button/Button";
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -179,6 +180,7 @@ class ContactForm extends React.Component {
       </label>
     </p>
     <p>
+      <Button text="Attempting" />
       <button className="default-btn" type="submit">Send</button>
     </p>
   </form>

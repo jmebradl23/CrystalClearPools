@@ -1,9 +1,8 @@
 import React from 'react';
 import './Services.css';
-// import Longpool from '../../img/longpool.jpg';
+import Button from '../Button/Button';
 import '../../main.css';
 import InlineImg from '../InlineImg/InlineImg';
-import Img1 from '../../img/img1.jpg'
 import Img2 from '../../img/img2.jpg'
 import Img3 from '../../img/img3.jpg'
 import Img4 from '../../img/img4.jpg'
@@ -13,10 +12,17 @@ function Services () {
     return (
         <div className="Services">
             <section className='sec1 sec-img'></section>
+            <section className="mt-100 padding-container">
+                <h1 className="txt-ctr sec-title">Pool Services</h1>
+                <p>Crystal Clear Pool & Spa Service is proud to offer the following pool services to pool owners. If you would like more information, or would like to inquire about a pool maintenance service that is not listed here, please do not hesitate to contact us.</p>
+                <ul className="btn-list">
+                    < Button text='Contact Us' path="/contact" classes="path-update default-btn" type="link"/>
+                </ul>
+            </section>
             <section className="padding-container">
                 {/* <div className='duet-flex'> */}
                     {/* <div className="half half-cont left"> */}
-                        < InlineImg title={'Pool Services'} description={'Crystal Clear Pool & Spa Service is proud to offer the following pool services to pool owners. If you would like more information, or would like to inquire about a pool maintenance service that is not listed here, please do not hesitate to contact us.'} img={Img1} reverse={false} imgWidth={30} contWidth={60}/>
+                        {/* < InlineImg title={'Pool Services'} description={'Crystal Clear Pool & Spa Service is proud to offer the following pool services to pool owners. If you would like more information, or would like to inquire about a pool maintenance service that is not listed here, please do not hesitate to contact us.'} img={Img1} reverse={false} imgWidth={30} contWidth={60}/> */}
                         {/* <h3>Sonoma Pool Maintenance Services</h3>
                         <p>Crystal Clear Pool & Spa Service is proud to offer the following pool maintenance services to Sonoma pool owners. If you would like more information, or would like to inquire about a pool maintenance service that is not listed here, please do not hesitate to contact us.</p> */}
                         < InlineImg title={'Pool Maintenance'} description={'Crystal Clear Pool & Spa Service offers pool owners extremely affordable weekly pool maintenance services. In addition to cleaning your swimming pool (including drains) and checking its chemical balance, we are also certified to provide regular maintenance for most any brand of pool auto cover.'} img={Img2} reverse={true} imgWidth={30} contWidth={60}/>

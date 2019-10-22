@@ -1,0 +1,118 @@
+.section-images {
+    margin: 120px 0 0 0 ;
+    text-align: center;
+}
+
+.img-container {
+    height: 80vh;
+}
+
+.main-img {
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+}
+
+img {
+    /*  To contain the image to the confines of the div  */
+    max-width: 100%;
+    
+  }
+
+  .fader {
+      position: static;
+      display: block;
+      margin: 0 auto;
+      width: 720px;
+  }
+  
+  .container {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .overlay, img {
+      position: absolute;
+  }
+
+  img {
+      width: 100px;
+      height: 100px;
+  }
+
+  p {
+      display: inline-block;
+      margin: 0 35px;
+  }
+
+  .overlay {
+    /* border: 1px solid black; */
+    width: 100px;
+    height: 100px;
+    content: '';
+}
+
+.mid-left {
+    margin-right: 50px;
+}
+
+.mid-right {
+    margin-left: 50px;
+}
+
+.boxr3 {
+    opacity: .9;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .9) 0, #fff 100%);
+}
+
+.boxr2 {
+    opacity: .6;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .5) 0, #fff 100%);
+}
+  
+.boxr1 {
+    opacity: .3;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, .1) 0, #fff 100%);
+}
+
+.boxl1 {
+    opacity: .3;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, .1) 0, #fff 100%);
+}
+
+.boxl2 {
+    opacity: .6;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, .5) 0, #fff 100%);
+}
+  
+.boxl3 {
+    opacity: .9;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, .9) 0, #fff 100%);
+}
+
+  /* .hero-image::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7) 0, #fff 100%);
+    margin-top: -400px;
+    height: 400px;
+    width: 100%;
+    content: '';
+  } */
+
+
+  .hero-image::after {
+    display: block;
+    position: relative;
+    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, .7) 0, #fff 100%); */
+    margin-top: -400px;
+    height: 400px;
+    width: 100%;
+    content: '';
+  }
+  
