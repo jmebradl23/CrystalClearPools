@@ -2,6 +2,7 @@
     border: 1px solid black;
     border-radius: 5px;
     margin: 1.9vw auto;
+    max-width: 900px;
 }
 
 
@@ -42,14 +43,14 @@
     opacity: 1;
 }
 
-.qa-detail .question h4 {
+.qa-detail .question p {
     background: lightgray;
     padding: 5px 55px 5px 20px;
     margin: 0 auto;
     border-radius: 5px;
 }
 
-.qa-detail.expanded .question h4 {
+.qa-detail.expanded .question p {
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 }
@@ -64,5 +65,5 @@
 .qa-detail.expanded .answer {
     height: auto;
     max-height: 1000px;
-    padding: 0 5vw;
+    padding: 1vw 4vw;
 }

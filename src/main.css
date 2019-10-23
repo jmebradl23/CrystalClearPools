@@ -5,32 +5,34 @@ body {
   min-width: 350px;
 }
 
+/* Fonts */
+h1, h2, h3, h4, h5 p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .txt-ctr {
   text-align: center;
 }
 
 h1 {
-  /* font-size: 4vw; */
-  font-size: 24px;
+  font-size: 48px;
 }
 
 h2 {
-  font-size: 3.5vw;
+  font-size: 38px;
 }
 
 h3 {
-  /* font-size: 2.6vw; */
-  font-size: 28px;
+  font-size: 32px;
 }
 
 h4 {
-  /* font-size: 2.4vw; */
-  font-size: 18px;
+  font-size: 24px;
 }
 
 h5 {
-  /* font-size: 2.2vw; */
-  font-size: 20px;
+  font-size: 18px;
 }
 
 p, li {
@@ -40,6 +42,26 @@ p, li {
 
 .txt-sm {
   font-size: 12px;
+}
+
+.hr-25 {
+  width: 25%;
+}
+
+.hr-33 {
+  width: 33%;
+}
+
+.hr-50 {
+  width: 50%;
+}
+
+.hr-75 {
+  width: 75%;
+}
+
+.hr-100 {
+  width: 100%;
 }
 
 section.padding-container {
@@ -52,7 +74,12 @@ section.padding-container {
   margin: 30px auto;
 }
 
-.dark {
+.duet-flex {
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* .dark {
   background: #282828;
   color: #fff;
 }
@@ -60,7 +87,7 @@ section.padding-container {
 .light {
     background: lightgray;
     color: #000;
-}
+} */
 
 .flex-left {
   order: 1
@@ -93,31 +120,6 @@ section.padding-container {
 .btn-list {
   padding: 0;
 }
-/* section.padding-container.mt-100 {
-  margin-top: 120px;
-} */
-
-@media only screen and (min-width: 1220px) {
-  h1 {
-    font-size: 48px;
-  }
-
-  h3 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-size: 28px;
-  }
-
-  h5 {
-    font-size: 28px;
-  }
-
-  p, li {
-    font-size: 18px;
-  }
-}
 
 @media only screen and (max-width: 776px) {
   h1 {
@@ -125,8 +127,13 @@ section.padding-container {
     text-align: center;
   }
 
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
   h3 {
-    font-size: 28px;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -137,11 +144,12 @@ section.padding-container {
   h5 {
     border-top: 1px solid;
     padding-top: 1.67em;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
   }
 
   p {
+    font-size: 14px;
     text-align: left;
   }
 
@@ -153,4 +161,7 @@ section.padding-container {
     display: block;
   }
 
+  .sm-hidden {
+    display: none;
+  }
 }

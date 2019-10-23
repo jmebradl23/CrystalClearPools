@@ -1,7 +1,7 @@
-import React, {useState, useCallback} from 'react';
+// import React, {useState, useCallback} from 'react';
+import React, {useState} from 'react';
 import Button from "../Button/Button";
 import './TestForm.css';
-// import {useDropzone} from 'react-dropzone'
 
 
 function TestForm() {
@@ -9,12 +9,13 @@ function TestForm() {
   const [status,setStatus] = useState('');
   const [email,setEmail] = useState('');
   const [message,setMessage] = useState('');
-  const [file, setFile] = useState({});
+  // const [file, setFile] = useState({});
+  const [file] = useState({});
 
-  const onDrop = useCallback(acceptedFiles => {
-    console.log(acceptedFiles)
-    setFile(acceptedFiles[0])
-  }, [])
+  // const onDrop = useCallback(acceptedFiles => {
+  //   console.log(acceptedFiles)
+  //   setFile(acceptedFiles[0])
+  // }, [])
 //   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
   const encode = (data) => {

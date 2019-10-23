@@ -5,36 +5,6 @@ import {Link} from 'react-router-dom';
 
 class Button extends React.Component {
 
-    constructor(props) {
-        super(props);
-      }
-
-    componentDidMount () {
-        // window.addEventListener('scroll', this.updateNavbar.bind(this), true);
-        // window.addEventListener("resize", this.updateNavbar.bind(this), true);
-        // this.setState({path: this.props.path});
-    }
-
-    componentDidUpdate() {
-        // console.log(this.props.path)
-        // if(this.props.path !== this.state.path) {
-        //     this.setState({path: this.props.path})
-        // }
-    }
-
-    // componentWillReceiveProps () {
-    //     if(this.state.path !== this.props.path) {
-    //         this.setState({path: window.location.pathname})
-    //     }
-    // }
-    
-    toggleDropdown () {
-        // this.setState(prevState => ({
-        //     dropdown: !prevState.dropdown
-        //   })
-        // )
-    }
-
     render () {
         if (this.props.type==="link") {
             return (

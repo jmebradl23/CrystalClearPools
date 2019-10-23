@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carousel2.css';
+
 import Button from '../Button/Button';
 import Img1 from '../../img/gallery/001.jpg';
 import Img2 from '../../img/gallery/003tall.jpg';
@@ -20,6 +20,8 @@ import Img17 from '../../img/gallery/017.jpg';
 import Img18 from '../../img/gallery/018.jpg';
 import Img19 from '../../img/gallery/019.jpg';
 import Img20 from '../../img/gallery/020.jpg';
+
+import './Carousel.css';
 
 class Carousel extends React.Component {
     constructor(props) {
@@ -51,7 +53,6 @@ class Carousel extends React.Component {
     }
  
     countCheck (num, direction) {
-        console.log(num, direction)
         if (direction) {
             if (num+1 === this.state.imagesLength) {
                 return 0
@@ -74,11 +75,11 @@ class Carousel extends React.Component {
     render () {
         return (
             <section className="section-images sm-show Carousel">
-                <ul class="duet-flex btn-list">
+                <ul className="duet-flex btn-list">
                     < Button text="Prev" classes="default-btn" method={this.decreaseHandler} />
                     < Button text="Next" classes="default-btn" method={this.increaseHandler} />
                 </ul>
-                    <img src={this.state.images[this.state.mainImg]} />
+                <img src={this.state.images[this.state.mainImg]} />
             </section>
         )
     }

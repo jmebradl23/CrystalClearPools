@@ -1,15 +1,15 @@
 import React from 'react';
-import Nav from '..//Nav/Nav';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
+import Nav from '../Nav/Nav';
 import Faq from '../FAQ/FaqMain/Faq';
 import Home from '../Home/Home';
 import Services from '../Services/Services';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Footer from '../Footer/Footer';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
-// import Gallery from '../Gallery/GalleryPage/Gallery';
-import Gallery from '../Carousel/Carousel2';
-
+import Gallery from '../Carousel/Carousel';
+import '../../main.css';
 
 class Wrapper extends React.Component {
 
@@ -26,8 +26,6 @@ class Wrapper extends React.Component {
     }
 
     updatePath (e) {
-        console.log(e.target.nodeName)
-        // console.log('data-path is: ', e.target.dataset.div_id)
         if (((e.target.nodeName==='LI') || (e.target.nodeName==='IMG')) && ( e.target.classList.contains('path-update'))) {
             if(e.target.dataset.div_id !== this.state.path) {
                 this.setState({path: e.target.dataset.div_id})

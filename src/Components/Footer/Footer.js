@@ -1,12 +1,12 @@
 import React from 'react';
-import './Footer.css';
+
 import Map from '../../img/ccMap.jpg';
 import Visa from '../../img/Visa.png';
 import Mastercard from '../../img/Mastercard.png';
 import AmEx from '../../img/American-Express.png';
 import Discover from '../../img/Discover.png';
-// import InlineImg from '../InlineImg/InlineImg';
-// import longpool from '../../img/longpool.jpg';
+
+import './Footer.css';
 
 function Footer () {
     return (

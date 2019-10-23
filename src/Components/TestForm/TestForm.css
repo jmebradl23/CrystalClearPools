@@ -5,3 +5,7 @@
 .Contact .success {
     color: forestgreen;
 }
+
+.TestForm input, .TestForm textarea {
+    display: block;
+}

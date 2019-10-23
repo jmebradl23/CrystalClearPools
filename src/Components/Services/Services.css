@@ -2,10 +2,15 @@
     background-image: url('/background1.jpg');
 }
 
+.Services .sec2 {
+    background-image: url('/background2.jpg');
+    background-position: center;
+}
+
 .Services .duet-flex {
-    /* display: flex; */
     align-items: center;
     justify-content: space-between;
+    margin: 1vw auto;
 }
 
 .Services .longpool img {
@@ -18,6 +23,14 @@
 
 .Services p {
     margin-top: 5px;
+}
+
+.Services hr {
+    margin-top: 4vw
+}
+
+.Services .InlineImg {
+    margin: 4vw auto;
 }
 
 @media only screen and (max-width: 776px) {
