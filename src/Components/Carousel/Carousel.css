@@ -1,6 +1,5 @@
 
   .Carousel.section-images {
-    /* margin: auto 2em; */
     margin: 120px 0 0 0 ;
     text-align: center;
     height: 80vh;
@@ -18,10 +17,6 @@
   .Carousel.section-images li {
       margin: 0 3vw 0;
       max-width: 100px;
-  }
-
-  .Carousel.section-images li.default-btn:hover {
-    cursor: pointer;
   }
 
   .Carousel img {

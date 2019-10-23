@@ -139,7 +139,6 @@
     
     .Nav .slider {
         overflow-y: scroll;
-        /* height:100%; */
         background: #fff;
         -webkit-transition:-webkit-transform 1s ease;
         -moz-transition:   -moz-transform 1s ease;
@@ -176,8 +175,6 @@
     .Nav.nav-sm .logo {
         width: 100px;
         height: 80px;
-        /* margin-top: 11px; */
-        
     }
 
     .Nav {

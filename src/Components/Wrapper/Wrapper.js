@@ -7,7 +7,7 @@ import Home from '../Home/Home';
 import Services from '../Services/Services';
 import Footer from '../Footer/Footer';
 import About from '../About/About';
-import Contact from '../Contact/Contact';
+import Contact from '../Contact/ContactPage/Contact';
 import Gallery from '../Carousel/Carousel';
 import '../../main.css';
 

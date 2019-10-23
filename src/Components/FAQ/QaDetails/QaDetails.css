@@ -5,7 +5,6 @@
     max-width: 900px;
 }
 
-
 .qa-detail .question-container {
     position: relative;
     cursor: pointer;
@@ -24,7 +23,6 @@
 
 .qa-detail.expanded .angle-up {
     display: inline-block;
-    /* color: orangered; */
 }
 
 .qa-detail.expanded .angle-down {

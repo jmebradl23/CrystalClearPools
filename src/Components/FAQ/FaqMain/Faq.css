@@ -5,9 +5,3 @@
 .faq .sec2 {
     background-image: url('/faq.jpg');
 }
-
-.faq hr {
-    width: 100%;
-    border-width: 1px;
-    margin: 25px auto;
-}

@@ -7,32 +7,6 @@
     background-position: center;
 }
 
-.Services .duet-flex {
-    align-items: center;
-    justify-content: space-between;
-    margin: 1vw auto;
-}
-
-.Services .longpool img {
-    max-height: 650px;
-}
-
-.Services h5 {
-    margin-bottom: 0;
-}
-
-.Services p {
-    margin-top: 5px;
-}
-
-.Services hr {
-    margin-top: 4vw
-}
-
-.Services .InlineImg {
-    margin: 4vw auto;
-}
-
 @media only screen and (max-width: 776px) {
     .Services .sec1 {
         background-position: -30px;

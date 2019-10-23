@@ -1,198 +1,95 @@
-import React from 'react';
-import './ContactForm.css';
+// import React, {useState, useCallback} from 'react';
+import React, {useState} from 'react';
 import Button from "../../Button/Button";
+import './ContactForm.css';
 
-class ContactForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        firstName: '',
-        lastName: '',
-        phone: '',
-        email: '', 
-        message: '',
-        errorMessages : {
-          email: 'Email is invalid',
-          phone: 'Phone is invalid',
-          text: 'Fields must be at least 3 characters'
-        },
-        activeErrors: []
-      }
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-      this.textInput = React.createRef();
+
+function ContactForm() {
+  const [name,setName] = useState('');
+  const [status,setStatus] = useState('');
+  const [email,setEmail] = useState('');
+  const [message,setMessage] = useState('');
+  // const [file, setFile] = useState({});
+  const [file] = useState({});
+
+  // const onDrop = useCallback(acceptedFiles => {
+  //   console.log(acceptedFiles)
+  //   setFile(acceptedFiles[0])
+  // }, [])
+//   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
+
+  const encode = (data) => {
+    const formData = new FormData();
+    Object.keys(data).forEach((k)=>{
+      formData.append(k,data[k])
+    });
+    return formData
+  }
+
+  const handleSubmit = e => {
+    const data = { "form-name": "contact", name, email, message, file }
+    
+    fetch("/", {
+      method: "POST",
+      // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
+      body: encode(data)
+    })
+      .then(() => setStatus("Form Submission Successful"))
+      .catch(error => setStatus("Form Submission Failed"));
+
+    e.preventDefault();
+  };
+
+  const handleChange = e => {
+    const {name, value} = e.target
+    if (name === 'name' ){
+      return setName(value)
     }
-
-    componentDidMount () {
-      this.textInput.current.focus();
+    if (name === 'email' ){
+      return setEmail(value)
     }
-  
-    handleChange(event) {
-      let currentName = event.target.name;
-      this.setState({[currentName]: event.target.value});
-
-    }
-
-    checkEmail (email) {
-      console.log(email)
-      if (!(email)) {return false};
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-        return true;
-      } else { return false }
-    }
-
-    checkPhone (phone) {
-      if ((!(phone))|| (phone=='')) {console.log('phone is empty'); return false};
-      if(phone.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/)) {
-        return true;
-      } else { return false }
-    }
-
-    checkText (str) {
-      if (!(str)) { return false}
-      if(str.length>=3) { return true; }
-      else { return false }
-    }
-
-    addErrorMsg (str) {
-      let msg = this.state.errorMessages[str];
-      console.log(msg);
-      if (!(this.state.activeErrors.includes(msg))) {
-        this.setState(prevState => ({
-          activeErrors: [...prevState.activeErrors, msg]
-        }))
-      }
-    }
-
-    removeErrorMsg (str) {
-      let msg = this.state.errorMessages[str];
-      console.log(msg);
-
-      this.setState(prevState => ({ 
-        activeErrors: prevState.activeErrors.filter (err => err !== msg) }))
-
-
-
-
-
-      // this.setState(prevState => ({
-      //   activeErrors: [...prevState.activeErrors, msg]
-      // }))
-      // let index = this.state.activeErrors.indexOf(msg);
-      // let newArr = [...this.state.activeErrors]
-      // if (index !== -1) {
-      //   newArr.splice(index, 1);
-      //   this.setState({activeErrors: newArr});
-      // }
-
-
-
-
-      // let position = this.state.activeErrors.indexOf(msg);
-      // if (position !== -1) {
-      //   this.state.activeErrors.splice(position,1);
-      // }
-      // console.log('removed errors', this.state.activeErrors)
-    }
-  
-    handleSubmit(event) {
-      event.preventDefault();
-      if(!(this.checkEmail(this.state.email))) { this.addErrorMsg('email') } else { this.removeErrorMsg('email')}
-      if(!(this.checkPhone(this.state.phone))) { this.addErrorMsg('phone') } else { this.removeErrorMsg('phone')}
-      if((!(this.checkText(this.state.firstName))) || (!(this.checkText(this.state.lastName))) || (!(this.checkText(this.state.message)))) { this.addErrorMsg('text') } else { this.removeErrorMsg('text')}
-    }
-  
-    render() {
-      return (
-        <div>
-          <div className={this.state.activeErrors.length ? 'error-msgs' : 'hidden'}>
-            {this.state.activeErrors.map((err, index) =>
-              <p key={index}>
-                {err}
-              </p>
-            )}
-          </div>
-          {/* <form action="POST" data-netlify="true" onSubmit={this.handleSubmit}>
-            <input type="hidden" name="form-name" value="contact-form" />
-            <div className="input-box">
-              <label>
-                First Name:
-                <input ref={this.textInput} focus={true} type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
-              </label>
-            </div>
-            <div className="input-box">
-              <label>
-                Last Name:
-                <input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
-              </label>
-            </div>
-            <div className="input-box">
-            <label>
-              Phone Number:
-              <input type="text" name="phone" value={this.state.phone} onChange={this.handleChange} />
-            </label>
-            </div>
-            <div className="input-box">
-            <label>
-              Email:
-              <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-            </label>
-            </div>
-            <div className="input-box">
-              <label>
-                Message:
-                <input type="text" name="message" value={this.state.message} onChange={this.handleChange} />
-              </label>
-            </div>
-            <div className="input-box">
-              <div data-netlify-recaptcha="true"></div>
-            </div>
-            <input className="default-btn" type="submit" value="Submit" />
-          </form> */}
-
-
-<form name="contact" method="post" action="/helloworld">
-    <input type="hidden" name="form-name" value="contact" />
-    <p>
-      <label>
-        Your First Name: <input ref={this.textInput} type="text" name="firstName" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Your Last Name: <input type="text" name="lastName" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Your Phone: <input type="text" name="phone" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Your Email: <input type="text" name="email" />
-      </label>
-    </p>
-    <p>
-      <label>
-        Message: <textarea name="message"></textarea>
-      </label>
-    </p>
-    <p>
-      <Button text="Attempting" />
-      <button className="default-btn" type="submit">Send</button>
-    </p>
-  </form>
-
-
-
-
-
-
-        </div>
-      );
+    if (name === 'message' ){
+      return setMessage(value)
     }
   }
 
-  export default ContactForm;
+  return (
+    <div className="TestForm">
+    {/* <form onSubmit={handleSubmit} action="/thank-you/"> */}
+
+    <form onSubmit={handleSubmit} name="contact" method="POST" action="/contact">
+        <input type="hidden" name="form-name" value="contact" />
+          <p>
+            <label>
+              Your Name: <input type="text" name="name" value={name} onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="text" name="email" value={email} onChange={handleChange} />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message" value={message} onChange={handleChange} />
+            </label>
+          </p>
+          {/* <div {...getRootProps()}>
+            <input {...getInputProps()} />
+            {
+              isDragActive ?
+                <p>Drop the files here ...</p> :
+                <p>Drag 'n' drop some files here, or click to select files</p>
+            }
+          </div> */}
+          <p>
+            {/* <button className="default-btn" type="submit">Send</button> */}
+            < Button text="Send" type="submit" classes="default-btn" />
+          </p>
+        </form>
+        <h3 className={status==="Form Submission Successful" ? 'success' : 'fail'} >{status}</h3>
+    </div>
+  );
+}
+
+export default ContactForm;

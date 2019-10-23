@@ -1,0 +1,32 @@
+.List {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.List li {
+    margin: 3vw auto;
+}
+
+.List p {
+    padding-left: 3vw;
+}
+
+@media only screen and (max-width: 776px) {
+    .List li, .List p {
+        text-align: center;
+        padding: 0;
+    }
+
+    .List p {
+        margin-top: 5px;
+    }
+
+    .List hr {
+        margin: 25px auto;
+    }
+    
+    ul.List {
+        list-style-type: none;
+        padding: 0;
+    }
+}

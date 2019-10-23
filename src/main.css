@@ -6,7 +6,7 @@ body {
 }
 
 /* Fonts */
-h1, h2, h3, h4, h5 p {
+h1, h2, h3, h4, h5, p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -44,6 +44,10 @@ p, li {
   font-size: 12px;
 }
 
+.hr-10 {
+  width: 10%;
+}
+
 .hr-25 {
   width: 25%;
 }
@@ -78,16 +82,6 @@ section.padding-container {
   align-items: center;
   justify-content: space-around;
 }
-
-/* .dark {
-  background: #282828;
-  color: #fff;
-}
-
-.light {
-    background: lightgray;
-    color: #000;
-} */
 
 .flex-left {
   order: 1
@@ -142,8 +136,6 @@ section.padding-container {
   }
 
   h5 {
-    border-top: 1px solid;
-    padding-top: 1.67em;
     font-size: 16px;
     text-align: center;
   }

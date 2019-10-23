@@ -2,9 +2,3 @@
     background-image: url('/background2.jpg');
     background-position: center;
 }
-
-.faq hr {
-    width: 100%;
-    border-width: 1px;
-    margin: 25px auto;
-}

@@ -3,6 +3,8 @@ import React from 'react';
 import InlineImg from '../InlineImg/InlineImg';
 import longpool from '../../img/longpool.jpg';
 import Column from '../Column/Column';
+import FullImg from '../FullImg/FullImg';
+import ContentContainer from '../ContentContainer/ContentContainer';
 
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { faSwimmer } from "@fortawesome/free-solid-svg-icons";
@@ -13,20 +15,14 @@ import './Home.css';
 
 class Home extends React.Component {
 
-    componentDidMount () {
-        window.scrollTo(0, 0);
-    }
-
     render () {
         return (
             <div className="Home">
-                
-                <section className='sec1 sec-img'>
-                    <h1 className="txt-ctr txt-overlay">Pool Service, Spa Repairs and Pool Maintenance in Napa and surrounding areas</h1>
-                </section>
 
-                <section className="padding-container sec-content">
-                    <h2 className="txt-ctr sec-title">About Us</h2>
+                < FullImg text="Pool Service, Spa Repairs and Pool Maintenance in Napa and surrounding areas" sec={1}/>
+                
+                < ContentContainer text="About Us">
+                
                     <div className="triplet-flex">
                         <div className="third third-cont flex-right">
                             
@@ -56,14 +52,18 @@ class Home extends React.Component {
                         
                         </div>
                     </div>
-                </section>
-                <section className='sec2 sec-img'></section>
 
-                <section className="padding-container sec-content longpool">
+                </ContentContainer>
+
+                < FullImg text="Pool Service, Spa Repairs and Pool Maintenance in Napa and surrounding areas" sec={2}/>
+
+
+                < ContentContainer>
 
                     < InlineImg title={'A Commitment to Customer Satisfaction'} description={'Crystal Clear Pool & Spa Service is one of the few Napa pool maintenance and repair companies to offer complete swimming pool maintenance and repair services for extremely affordable prices. This means that no matter the size of your project or number of Napa pool maintenance or repair services you require, you can trust that every step of the process will be expertly handled by the same company. Our work is always guaranteed, and we make sure that you are kept up-to-date on our progress and on any and all aspect of the work that may bring changes to the schedule or work order. If you are a Napa pool owner and would like more information on the pool maintenance and repair services we offer, do not hesitate to call us today. We will be happy to schedule a free estimate at your earliest convenience.'} tag={'Call us now! (707) 252-8255'} img={longpool} reverse={false} imgWidth={30} contWidth={60}/>
 
-                </section>
+                </ContentContainer>
+
             </div>
         )
     }

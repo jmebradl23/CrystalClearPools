@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../main.css';
-import './Button.css';
 import {Link} from 'react-router-dom';
+
+import './Button.css';
 
 class Button extends React.Component {
 

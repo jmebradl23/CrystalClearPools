@@ -20,7 +20,7 @@ function Footer () {
                     </div>
                     <div className='half half-img flex-right'>
                         <div className="img-container">
-                            <div className="img_holder map">
+                            <div className="img_holder map txt-ctr">
                                 <a href="https://www.google.com/maps/place/Crystal+Clear+Pool+%26+Spa/@38.3226835,-122.8657747,9z/data=!3m1!4b1!4m5!3m4!1s0x0:0xd98c151d45dbda8e!8m2!3d38.324017!4d-122.3053349?hl=en" >
                                     <img src={Map} alt='Area map'/> 
                                 </a>   

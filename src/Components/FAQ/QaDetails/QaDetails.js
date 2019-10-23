@@ -1,8 +1,10 @@
 import React from 'react';
-import './QaDetails.css';
+
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import './QaDetails.css';
 
 class QaDetails extends React.Component {
 
