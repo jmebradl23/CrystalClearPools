@@ -1,6 +1,8 @@
 .Contact .sec1 {
     background-image: url('/background14.jpg');
     height: 50vh;
+    /* background-position-y: -6vw; */
+    background-position-y: 30%;
 }
 
 .Contact .half {
