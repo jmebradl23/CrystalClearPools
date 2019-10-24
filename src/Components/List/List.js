@@ -8,7 +8,7 @@ class List extends React.Component {
         return (
             <ul className="List">
                 {this.props.items.map((el, index) => (
-                    <li>
+                    <li key={`${this.props.keyName}${index}`}>
                         <h5>{el.title}</h5>
                         <p>{el.text}</p>
                         <hr className={index<this.props.items.length-1?'lg-hidden hr-10':'hidden'}></hr>

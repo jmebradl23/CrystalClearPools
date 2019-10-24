@@ -79,7 +79,7 @@ class Carousel extends React.Component {
                     < Button text="Prev" classes="default-btn" method={this.decreaseHandler} />
                     < Button text="Next" classes="default-btn" method={this.increaseHandler} />
                 </ul>
-                <img src={this.state.images[this.state.mainImg]} />
+                <img src={this.state.images[this.state.mainImg]} alt='From Crystal Clear gallery' />
             </section>
         )
     }
