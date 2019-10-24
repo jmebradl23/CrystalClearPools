@@ -1,0 +1,12 @@
+.FullImg .txt-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;                      
+    transform: translate(-50%, -50%);
+    min-width: 85%;
+}
+
+.FullImg {
+    height: 100vh;
+    background-size: cover;
+}
