@@ -6,9 +6,3 @@
     background-image: url('/background2.jpg');
     background-position: center;
 }
-
-@media only screen and (max-width: 776px) {
-    .Services .sec1 {
-        background-position: -30px;
-    }
-}

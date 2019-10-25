@@ -63,4 +63,8 @@
     .Contact .hours, .Contact .contact-info {
         margin-top: 20px;
     }
+
+    .Contact .hours p, .Contact .contact-info p {
+        text-align: center;
+    }
 }

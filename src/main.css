@@ -149,6 +149,10 @@ section.padding-container {
     text-align: left;
   }
 
+  .page-title {
+    margin-top: 5vw;
+  }
+
   .triplet-flex, .duet-flex, .quad-flex {
     display: block;
   }

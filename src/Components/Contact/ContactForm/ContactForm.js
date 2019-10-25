@@ -1,4 +1,3 @@
-// import React, {useState, useCallback} from 'react';
 import React, {useState} from 'react';
 import Button from "../../Button/Button";
 import './ContactForm.css';
@@ -9,14 +8,7 @@ function ContactForm() {
   const [status,setStatus] = useState('');
   const [email,setEmail] = useState('');
   const [message,setMessage] = useState('');
-  // const [file, setFile] = useState({});
   const [file] = useState({});
-
-  // const onDrop = useCallback(acceptedFiles => {
-  //   console.log(acceptedFiles)
-  //   setFile(acceptedFiles[0])
-  // }, [])
-//   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
   const encode = (data) => {
     const formData = new FormData();
@@ -31,7 +23,6 @@ function ContactForm() {
     
     fetch("/", {
       method: "POST",
-      // headers: { "Content-Type": 'multipart/form-data; boundary=random' },
       body: encode(data)
     })
       .then(() => setStatus("Form Submission Successful"))
@@ -55,7 +46,6 @@ function ContactForm() {
 
   return (
     <div className="TestForm">
-    {/* <form onSubmit={handleSubmit} action="/thank-you/"> */}
 
     <form onSubmit={handleSubmit} name="contact" method="POST" action="/contact">
         <input type="hidden" name="form-name" value="contact" />
@@ -74,16 +64,7 @@ function ContactForm() {
               Message: <textarea name="message" value={message} onChange={handleChange} />
             </label>
           </p>
-          {/* <div {...getRootProps()}>
-            <input {...getInputProps()} />
-            {
-              isDragActive ?
-                <p>Drop the files here ...</p> :
-                <p>Drag 'n' drop some files here, or click to select files</p>
-            }
-          </div> */}
           <p>
-            {/* <button className="default-btn" type="submit">Send</button> */}
             < Button text="Send" type="submit" classes="default-btn" />
           </p>
         </form>

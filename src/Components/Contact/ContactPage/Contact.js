@@ -20,6 +20,7 @@ function Contact (props) {
 					< ContactForm />
 				
 				</div>
+				<hr className="hr-50"></hr>
 				<div className="half text-right">
 					<div className="">
 						<div className="contact-info">
@@ -30,7 +31,7 @@ function Contact (props) {
 							<p>Text: 707-320-7009</p>
 							<p>Email: <a href="mailto:info@ccpoolspa.expert">info@ccpoolspa.expert</a></p>
 						</div>
-						<hr></hr>
+						<hr className="hr-50"></hr>
 						<div className="hours">
 							<h3>Hours of Service</h3>
 							<p>Monday to Thursday: 10:00AM - 6:00PM</p>

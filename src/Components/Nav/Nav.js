@@ -25,6 +25,7 @@ class Nav extends React.Component {
         window.addEventListener('scroll', this.updateNavbar.bind(this), true);
         window.addEventListener("resize", this.updateNavbar.bind(this), true);
         this.setState({path: this.props.path});
+        this.updateNavbar();
     }
 
     componentDidUpdate() {
