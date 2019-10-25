@@ -55,7 +55,7 @@ class Home extends React.Component {
 
                 </ContentContainer>
 
-                < FullImg text="Pool Service, Spa Repairs and Pool Maintenance in Napa and surrounding areas" sec={2}/>
+                < FullImg sec={2}/>
 
 
                 < ContentContainer>
