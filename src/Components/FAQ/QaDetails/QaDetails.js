@@ -8,16 +8,11 @@ import './QaDetails.css';
 
 class QaDetails extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.accordionHandler = this.accordionHandler.bind(this);
-    }
-
     state = {
         expanded: false
     }
 
-    accordionHandler (event) {
+    accordionHandler = (event) => {
         this.setState(prevState => ({
             expanded: !prevState.expanded
         }))

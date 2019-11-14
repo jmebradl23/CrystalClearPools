@@ -6,11 +6,10 @@ Step 1: Create a React app
     $ npx create-react-app <name>
 Step 2: Delete everything in src directory
 Step 3: Create an index.js file in the src directory
-Step 4: In the index.js file, import the React library in order to translate your JSX into HTML in the browser.
+Step 4: In the index.js file, import the React library in order to translate your JSX into HTML in the browser, and import the React DOM library in order to access and modify the DOM.
     import React from 'react';
-Step 5: In the index.js file, import the React DOM library in order to access and modify the DOM.
     import ReactDOM from 'react-dom';
-Step 6: In the index.js file, add the following code so React can manipulate the DOM and add your JSX after it has been translated to HTML:
+Step 5: In the index.js file, add the following code so React can manipulate the DOM and add your JSX after it has been translated to HTML:
     ...
     ReactDOM.render(<App />, document.getElementById('root'));
     ...
@@ -25,7 +24,6 @@ Step 1: Createa a new component file in the src folder. (For this example we'll 
     <ComponentName>.js 
 Step 2: In the component file, import the React library in order to translate your JSX into HTML in the browser.
     import React from 'react';
-    import ReactDOM from 'react-dom';
 Step 3: Create a JSX function to return some html.
     const Basics = function() {
         return (

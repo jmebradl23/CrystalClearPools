@@ -20,7 +20,7 @@ function Contact (props) {
 					< ContactForm />
 				
 				</div>
-				<hr className="hr-50"></hr>
+				<hr className="hr-50 lg-hidden"></hr>
 				<div className="half text-right">
 					<div className="">
 						<div className="contact-info">

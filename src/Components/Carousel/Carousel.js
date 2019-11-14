@@ -24,47 +24,28 @@ import Img20 from '../../img/gallery/020.jpg';
 import './Carousel.css';
 
 class Carousel extends React.Component {
-    constructor(props) {
-      super(props)
-      this.decreaseHandler = this.decreaseHandler.bind(this);
-      this.increaseHandler = this.increaseHandler.bind(this);
-      this.countCheck = this.countCheck.bind(this);
-    }
 
     state = {
         images: [Img1,Img2,Img3,Img4,Img5,Img6,Img7,Img8,Img9,Img10,Img11,Img12,Img13,Img15,Img16,Img17,Img18,Img19,Img20],
         imagesLength: 0,
         image: 1,
-        mainImg: 2,
-        leftImg: 1,
-        rightImg: 3
+        mainImg: 2
     }
 
-    decreaseHandler () {
+    decreaseHandler = () => {
         this.setState({mainImg: this.countCheck(this.state.mainImg, false)})
-        this.setState({leftImg: this.countCheck(this.state.leftImg, false)})
-        this.setState({rightImg: this.countCheck(this.state.rightImg, false)})
-    }
+   }
 
-    increaseHandler () {
+    increaseHandler = () => {
         this.setState({mainImg: this.countCheck(this.state.mainImg, true)})
-        this.setState({leftImg: this.countCheck(this.state.leftImg, true)})
-        this.setState({rightImg: this.countCheck(this.state.rightImg, true)})
     }
  
     countCheck (num, direction) {
+        console.log(this.state)
         if (direction) {
-            if (num+1 === this.state.imagesLength) {
-                return 0
-            } else {
-                return num+1;
-            }
+            return (num===(this.state.imagesLength-1)?0: num+1)
         } else {
-            if ((num-1)<0) {
-                return this.state.imagesLength-1
-            } else {
-                return num-1;
-            }
+           return (num===0?this.state.imagesLength-1: num-1)
         }
     }
     

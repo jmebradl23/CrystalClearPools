@@ -2,21 +2,20 @@ import React from 'react';
 
 import './List.css';
 
-class List extends React.Component {
+function List (props) {
 
-    render () {
-        return (
-            <ul className="List">
-                {this.props.items.map((el, index) => (
-                    <li key={`${this.props.keyName}${index}`}>
-                        <h5>{el.title}</h5>
-                        <p>{el.text}</p>
-                        <hr className={index<this.props.items.length-1?'lg-hidden hr-10':'hidden'}></hr>
-                    </li>
-                ))}
-            </ul>
-        )
-    }
+    return (
+        <ul className="List">
+            {props.items.map((el, index) => (
+                <li key={`${props.keyName}${index}`}>
+                    <h5>{el.title}</h5>
+                    <p>{el.text}</p>
+                    <hr className={index<props.items.length-1?'lg-hidden hr-10':'hidden'}></hr>
+                </li>
+            ))}
+        </ul>
+    )
+
 }
 
 export default List;

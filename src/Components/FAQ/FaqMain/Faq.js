@@ -8,9 +8,8 @@ import List from '../../List/List';
 
 import './Faq.css';
 
-class Faq extends React.Component {
+function Faq (props) {
 
-    render () {
         return (
             <div className="faq">
 
@@ -38,7 +37,6 @@ class Faq extends React.Component {
             
             </div>
         )
-    }
 }
 
 export default Faq;

@@ -2,16 +2,14 @@ import React from 'react';
 
 import './ContentContainer.css';
 
-class ContentContainer extends React.Component {
+function ContentContainer (props) {
 
-    render () {
-        return (
-            <section className={`Content ${this.props.classes}`}>
-                <h2 className={this.props.text ? "txt-ctr page-title" : "hidden"} > {this.props.text}</h2>
-                <div>{this.props.children}</div>
-            </section>
-        )
-    }
+    return (
+        <section className={`Content ${props.classes}`}>
+            <h2 className={props.text ? "txt-ctr page-title" : "hidden"} > {props.text}</h2>
+            <div>{props.children}</div>
+        </section>
+    )
 }
 
 export default ContentContainer;

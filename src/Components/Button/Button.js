@@ -3,25 +3,26 @@ import {Link} from 'react-router-dom';
 
 import './Button.css';
 
-class Button extends React.Component {
-
-    render () {
-        if (this.props.type==="link") {
-            return (
-                <Link to={this.props.path} onClick={this.props.method} style={{ textDecoration: 'none' }}> 
-                    <li data-div_id={this.props.path} className={this.props.classes}>{this.props.text}</li>
-                </Link>
-            )
-        } else if (this.props.type==="submit") {
-            return (
-                <button className={this.props.classes} type='submit' >{this.props.text}</button>
-            )
-        } else {
-            return (
-                <li className={this.props.classes} onClick={this.props.method} >{this.props.text}</li>
-            )
-        }
+function returnJSX (props) {
+    if (props.type==="link") {
+        return (
+            <Link to={props.path} onClick={props.method} style={{ textDecoration: 'none' }}> 
+                <li data-div_id={props.path} className={props.classes}>{props.text}</li>
+            </Link>
+        )
+    } else if (props.type==="submit") {
+        return (
+            <button className={props.classes} type='submit' >{props.text}</button>
+        )
+    } else {
+        return (
+            <li className={props.classes} onClick={props.method} >{props.text}</li>
+        )
     }
+}
+
+function Button (props) {
+    return returnJSX(props)
 }
 
 export default Button;

@@ -9,12 +9,6 @@ import './Nav.css';
 
 class Nav extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.toggleDropdown = this.toggleDropdown.bind(this);
-        this.closeDropdown = this.closeDropdown.bind(this);
-    }
-
     state = {
         smallNav: false,
         dropdown: false,
@@ -34,7 +28,7 @@ class Nav extends React.Component {
         }
     }
     
-    toggleDropdown () {
+    toggleDropdown = () => {
         this.setState(prevState => ({
             dropdown: !prevState.dropdown
           })
@@ -51,7 +45,7 @@ class Nav extends React.Component {
         }
     }
 
-    closeDropdown (ev) {
+    closeDropdown = (ev) => {
         if ( this.state.dropdown ) {
             this.setState({dropdown: false})
         }
