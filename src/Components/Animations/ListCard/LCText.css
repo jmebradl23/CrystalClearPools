@@ -1,0 +1,6 @@
+.lcText {
+    font-family: Helvetica;
+    transform: translate3d(0,110px,0);
+    transition: transform 750ms ease;
+    padding: 20px 0px;
+}

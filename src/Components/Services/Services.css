@@ -6,3 +6,32 @@
     background-image: url('/background2.jpg');
     background-position: center;
 }
+
+.Services .maintenance .duet-flex {
+    justify-content: center;
+    margin: 4vw 0px;
+}
+
+.Services .maintenance .duet-flex .Background {
+    justify-content: center;
+    margin: 0px 2vw;
+}
+
+.Services .Background {
+    height: 335px;
+    width: 335px;
+}
+
+@media only screen and (max-width: 776px) {
+    .Services .List li {
+        margin: 4vw auto;
+    }
+
+    .Services .List h5 {
+        text-decoration: underline;
+    }
+
+    .Services .List p {
+        margin: 0;
+    }
+}

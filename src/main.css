@@ -73,7 +73,7 @@ section.padding-container {
   margin: 3vw auto;
 }
 
-.triplet-flex, .duet-flex, .quad-flex {
+.triplet-flex, .duet-flex, .quad-flex, .flexible {
   display: flex;
   margin: 30px auto;
 }

@@ -1,0 +1,4 @@
+.lcHover {
+    opacity: 0;
+    transition: opacity 750ms ease;
+}

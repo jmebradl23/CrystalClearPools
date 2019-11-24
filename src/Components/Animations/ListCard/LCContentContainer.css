@@ -1,0 +1,13 @@
+.lcContentContainer {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: transparent;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(36%);
+    transition: 750ms ease;
+}

@@ -5,3 +5,33 @@
 .faq .sec2 {
     background-image: url('/faq.jpg');
 }
+
+.faq .tips .duet-flex {
+    justify-content: center;
+    margin: 4vw 0px;
+}
+
+.faq .tips .duet-flex .lcBackground {
+    justify-content: center;
+    margin: 0px 2vw;
+}
+
+.faq .lcBackground {
+    height: 300px;
+    width: 310px;
+}
+
+
+@media only screen and (max-width: 776px) {
+    .faq .List li {
+        margin: 4vw auto;
+    }
+
+    .faq .List h5 {
+        text-decoration: underline;
+    }
+
+    .faq .List p {
+        margin: 0;
+    }
+}

@@ -6,17 +6,19 @@ import ContentContainer from '../ContentContainer/ContentContainer';
 import FullImg from '../FullImg/FullImg';
 import List from '../List/ListWrapper/ListWrapper';
 import services from '../../content/services';
+import LCCard from '../../Components/Animations/ListCard/LCBackground';
 
 import Img2 from '../../img/img2.jpg'
 import Img3 from '../../img/img3.jpg'
 import Img4 from '../../img/img4.jpg'
+
 
 import './Services.css';
 
 function Services () {
 
     const servicesItems = services.map((service) =>
-        <List data={service} />
+        <List key={service.id} data={service} />
     );
 
     return (
@@ -38,7 +40,7 @@ function Services () {
 
             < FullImg sec={1} />
 
-            < ContentContainer text="Pool Maintenance">
+            < ContentContainer text="Pool Maintenance" className="maintenance">
 
                 <p className="txt-ctr">Is your pool in use all summer long? Are you constantly entertaining family and friends in your pool? Do you feel that there is not enough time in the day to keep your pool adequately maintained? If you answered “yes” to any of these questions then you need to call Crystal Clear Pool & Spa Service today.</p>
 

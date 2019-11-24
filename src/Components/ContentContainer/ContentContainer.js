@@ -7,7 +7,7 @@ function ContentContainer (props) {
     return (
         <section className={`Content ${props.classes}`}>
             <h2 className={props.text ? "txt-ctr page-title" : "hidden"} > {props.text}</h2>
-            <div>{props.children}</div>
+            {props.children}
         </section>
     )
 }

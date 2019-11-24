@@ -1,0 +1,35 @@
+.lcBackground {
+    color: #000;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    background-image: url('../../../img/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lcBackground:hover {
+    color: #fff;
+    transition: background-color 750ms ease;
+}
+
+.lcBackground:hover .lcImgCover {
+    background-color: rgba(0,0,0,.7);
+}
+
+.lcBackground:hover .lcContentContainer {
+    transform: translateY(0%);
+}
+
+.lcBackground:hover .lcText {
+    transform: translateY(0%);
+}
+
+.lcBackground:hover .lcTitle {
+    transform: translate3d(0,0,0);
+}
+
+.lcBackground:hover .lcHover {
+    opacity: 1;
+}
