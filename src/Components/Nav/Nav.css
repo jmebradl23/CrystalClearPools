@@ -39,6 +39,10 @@
     transition: 1s;
 }
 
+.Nav p {
+    font-size: 22px;
+}
+
 .Nav.nav-sm li, .Nav.nav-sm p {
     line-height: 80px;
     height: 80px;
@@ -91,12 +95,20 @@
         font-size: 18px;
         padding: 0 15px;
     }
+
+    .Nav p {
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     .Nav p, .Nav li, .Nav.nav-sm li {
         font-size: 16px;
         padding: 0 10px;
+    }
+
+    .Nav p {
+        font-size: 12px;
     }
 }
 
@@ -117,6 +129,10 @@
         display: block;
     }
 
+    .Nav.nav-sm p {
+        font-size: 14px;
+    }
+    
     .Nav.nav-sm .flex-right {
         margin-top: 0;
     }
@@ -176,7 +192,6 @@
         line-height: 50px;
         height: 50px;
         padding: 0 5px;
-        font-size: 14px;
     }
 
     .Nav.nav-sm .logo {
