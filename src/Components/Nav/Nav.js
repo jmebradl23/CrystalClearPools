@@ -38,7 +38,7 @@ class Nav extends React.Component {
     updateNavbar() {
         if ((window.scrollY) && (window.innerWidth>776)) {
             this.setState({smallNav: true})
-        } else if ( window.innerWidth<776 ) {
+        } else if ( window.innerWidth<=776 ) {
             this.setState({smallNav: true})
         } else {
             this.setState({smallNav: false})
@@ -61,10 +61,10 @@ class Nav extends React.Component {
                                 <img className="logo path-update" data-div_id={null} src={logo} alt="Company logo" onClick={this.closeDropdown} />
                             </li>
                         </Link>
-                        <li className="sm-no-pad">
+                        <li className="sm-no-pad telephone">
                             <p>Tel: (707) 252-8255</p>
                         </li>
-                        <li id="navToggle" className="hamburger sm-show right">
+                        <li id="navToggle" className="hamburger lg-hidden right">
                             <FontAwesomeIcon icon={faBars} style={{color:"#000"}} size="2x" onClick={this.toggleDropdown}/>
                         </li>
                     </ul>
