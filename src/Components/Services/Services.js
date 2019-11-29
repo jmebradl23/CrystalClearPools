@@ -1,17 +1,15 @@
 import React from 'react';
-
 import CTA from '../CTA/CTA';
 import InlineImg from '../InlineImg/InlineImg';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import FullImg from '../FullImg/FullImg';
 import List from '../List/ListWrapper/ListWrapper';
+
 import services from '../../content/services';
-import LCCard from '../../Components/Animations/ListCard/LCBackground';
 
 import Img2 from '../../img/img2.jpg'
 import Img3 from '../../img/img3.jpg'
 import Img4 from '../../img/img4.jpg'
-
 
 import './Services.css';
 
@@ -38,7 +36,7 @@ function Services () {
 
             </ContentContainer>
 
-            < FullImg sec={1} />
+            < FullImg sec={2} />
 
             < ContentContainer text="Pool Maintenance" className="maintenance">
 

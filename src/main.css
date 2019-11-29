@@ -11,10 +11,6 @@ h1, h2, h3, h4, h5, p {
   margin-bottom: 0px;
 }
 
-.txt-ctr {
-  text-align: center;
-}
-
 h1 {
   font-size: 44px;
 }
@@ -43,7 +39,9 @@ p, li {
 .txt-sm {
   font-size: 12px;
 }
+/* End fonts */
 
+/* Line separator */
 .hr-10 {
   width: 10%;
 }
@@ -67,12 +65,9 @@ p, li {
 .hr-100 {
   width: 100%;
 }
+/* End line separators */
 
-section.padding-container {
-  width: 90%;
-  margin: 3vw auto;
-}
-
+/* Flex rules */
 .triplet-flex, .duet-flex, .quad-flex, .flexible {
   display: flex;
   margin: 30px auto;
@@ -94,17 +89,15 @@ section.padding-container {
 .flex-right {
   order: 2;
 }
+/* End flex rules */
+
+/* General classes */
+.txt-ctr {
+  text-align: center;
+}
 
 .hidden {
   display: none;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
 }
 
 .text-right {

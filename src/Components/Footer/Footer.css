@@ -12,13 +12,7 @@
   }
 
 .Footer .half-img {
-      flex: 0 1 25%;
-  }
-
-.Footer .footer-container {
-    width: 90%;
-    margin: 3vw auto 0;
-    padding-bottom: 30px;
+    flex: 0 1 25%;
   }
 
 .Footer .map img {

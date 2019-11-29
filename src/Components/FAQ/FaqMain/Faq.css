@@ -3,7 +3,7 @@
 }
 
 .faq .sec2 {
-    background-image: url('/faq.jpg');
+    background-image: url('/background7.jpg');
 }
 
 .faq .tips .duet-flex {
@@ -33,5 +33,18 @@
 
     .faq .List p {
         margin: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .faq .sec1 {
+        background-position-x: 40%;
+    }
+
+    .faq .sec2 {
+        background-position-x: 10%;
+    }
+    .faq .sec2 {
+        background-image: url('/background7.jpg');
     }
 }
