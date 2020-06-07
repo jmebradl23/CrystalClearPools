@@ -61,7 +61,7 @@ function ContactForm() {
           </p>
           <p>
             <label>
-              Message: <textarea name="message" value={message} onChange={handleChange} />
+              Your Message: <textarea name="message" value={message} onChange={handleChange} />
             </label>
           </p>
           <p>
