@@ -96,6 +96,10 @@ p, li {
   text-align: center;
 }
 
+.txt-justify {
+  text-align: justify;
+}
+
 .hidden {
   display: none;
 }
